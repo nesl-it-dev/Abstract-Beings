@@ -1,7 +1,7 @@
 import React from "react";
 
 const Page = () => {
-  return <div className="text-3xl text-peach">Abstract</div>;
+  return <>landing</>;
 };
 
 export default Page;
