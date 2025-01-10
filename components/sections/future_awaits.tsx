@@ -35,7 +35,7 @@ const FutureAwaits = () => {
 
         {/* Styled Button */}
         <div className="mt-6">
-          <Button text="The journey begins now" />
+          <Button text="The journey begins now" width={320} />
         </div>
       </div>
     </div>

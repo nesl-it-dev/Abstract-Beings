@@ -4,6 +4,8 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Button from "../button/button";
+import { BsDiscord } from "react-icons/bs";
+import { FaDiscord } from "react-icons/fa";
 
 const AbstractSection = () => {
   const ref = useRef(null);
@@ -53,7 +55,11 @@ const AbstractSection = () => {
           intellectual property, and creating immersive digital experiences.
         </p>
         <div className="mt-3">
-          <Button text="Discord" iconSrc="/Discord.png" />
+          <Button
+            text="Discord"
+            iconComponent={<FaDiscord className="text-3xl" />}
+            width={180}
+          />
         </div>
       </div>
 

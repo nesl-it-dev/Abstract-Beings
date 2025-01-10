@@ -44,8 +44,14 @@ const AbstractCollective = () => {
 
         {/* Social Buttons - Aligned */}
         <div className="flex space-x-4">
-          <Button text="Twitter" iconComponent={<BsTwitter />} />
-          <Button text="Discord" iconComponent={<BsDiscord />} />
+          <Button
+            text="Twitter"
+            iconComponent={<BsTwitter className="text-3xl" />}
+          />
+          <Button
+            text="Discord"
+            iconComponent={<BsDiscord className="text-3xl" />}
+          />
         </div>
       </div>
     </div>
