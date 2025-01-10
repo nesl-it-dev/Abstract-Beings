@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "../button/button";
+import Button from "@/components/button/button";
 
 const Mystical = () => {
   return (

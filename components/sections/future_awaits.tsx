@@ -1,4 +1,4 @@
-import Button from "../button/button";
+import Button from "@/components/button/button";
 
 const FutureAwaits = () => {
   return (

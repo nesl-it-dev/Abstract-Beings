@@ -1,6 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Button from "../button/button";
+import Button from "@/components/button/button";
 import { BsDiscord, BsTwitter } from "react-icons/bs";
 
 const AbstractCollective = () => {

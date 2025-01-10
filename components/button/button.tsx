@@ -1,4 +1,6 @@
 // Button.tsx
+"use client";
+
 import DefaultBtn from "@/assets/svgs/default_btn";
 import HoverBtn from "@/assets/svgs/hover_btn";
 import React, { useState, useMemo } from "react";
