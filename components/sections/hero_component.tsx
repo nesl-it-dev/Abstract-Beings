@@ -5,6 +5,16 @@ import { motion } from "framer-motion";
 import { BsDiscord, BsTwitter } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 import { useEffect, useState } from "react";
+// import ResponsiveBackgroundImage from "../responsive_background_image";
+
+// const backgroundImages = {
+//   base: "/forest_1.png",
+//   sm: "/forest_1.png",
+//   md: "/forest_1.png",
+//   lg: "/forest_1.png",
+//   xl: "/forest_1.png",
+//   "2xl": "/hero_2560.png",
+// };
 
 const Hero = () => {
   const [scrollAmount, setScrollAmount] = useState(0);
@@ -40,12 +50,17 @@ const Hero = () => {
       </header>
 
       {/* Background Image */}
+      {/* <ResponsiveBackgroundImage
+        images={backgroundImages}
+        alt="Hero Background"
+      /> */}
+
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero_img_1920.png"
+          src="/hero_img_big.png"
           layout="fill"
           alt="Jungle Background"
-          className="w-full h-full object-fill"
+          className="w-full h-full object-cover"
         />
       </div>
 

@@ -9,7 +9,7 @@ const CallToMortals = () => {
           src="/mortals.png"
           layout="fill"
           alt="Abstract Background"
-          className="w-full h-full object-top"
+          className="w-full h-full object-cover"
         />
       </div>
 

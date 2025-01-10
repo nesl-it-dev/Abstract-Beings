@@ -28,7 +28,7 @@ const AbstractSection = () => {
           src="/abstract.png" // Update this path as needed
           alt="Background Image"
           layout="fill"
-          className="w-full h-full object-fill"
+          className="w-full h-full object-cover"
         />
       </div>
 

@@ -11,7 +11,7 @@ const Purpose = () => {
         alt="Background"
         layout="fill"
         quality={100}
-        className="w-full h-full object-fill"
+        className="w-full h-full object-cover"
       />
 
       {/* Content */}

@@ -9,7 +9,7 @@ export default function VisionSection() {
           src="/Vision.png"
           layout="fill"
           alt="Jungle Background"
-          className="w-full h-full object-fill"
+          className="w-full h-full object-cover"
         />
       </div>
 

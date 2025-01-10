@@ -9,7 +9,7 @@ const Mystical = () => {
           src="/dimension.png"
           alt="Mystical Image"
           layout="fill"
-          className="w-full h-full"
+          className="w-full h-full object-cover"
           quality={100}
         />
       </div>
