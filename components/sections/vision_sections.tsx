@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function VisionSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center px-6 md:px-16 py-20">
+    <section className="relative flex flex-col items-center justify-center px-6 md:px-16 py-20 min-h-screen">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -21,7 +21,6 @@ export default function VisionSection() {
             alt="Abstract Character"
             width={500}
             height={500}
-            // className="drop-shadow-lg"
           />
         </div>
 

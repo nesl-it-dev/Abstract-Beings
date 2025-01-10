@@ -8,7 +8,7 @@ import { FaDiscord } from "react-icons/fa";
 
 const AbstractSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.3 }); // `amount` works like `threshold`
+  const isInView = useInView(ref, { once: false, amount: 0.3 });
 
   const controls = useAnimation();
 
@@ -19,19 +19,23 @@ const AbstractSection = () => {
       controls.start({ rotateY: 180, opacity: 0 });
     }
   }, [isInView, controls]);
-  return (
-    <section className="relative text-black py-16 px-6 md:px-16 lg:px-24 flex flex-col md:flex-row items-center">
-      {/* Content Box */}
 
+  return (
+    <section
+      ref={ref}
+      className="relative text-black py-16 px-6 md:px-16 lg:px-24 flex flex-col md:flex-row items-center min-h-screen"
+    >
+      {/* Background Image */}
       <div className="absolute inset-0 w-full h-full z-0">
         <Image
-          src="/abstract.png" // Update this path as needed
+          src="/abstract.png"
           alt="Background Image"
           layout="fill"
           className="w-full h-full object-cover"
         />
       </div>
 
+      {/* Content Box */}
       <div className="relative z-10 md:w-1/2 p-6 text-left">
         <h2 className="text-3xl md:text-[42px] font-semibold mb-4">
           Why{" "}
@@ -64,7 +68,6 @@ const AbstractSection = () => {
 
       {/* Floating Character Image */}
       <motion.div
-        ref={ref}
         className="relative z-10 md:w-1/2 flex items-center justify-center h-full"
         initial={{ rotateY: 180, opacity: 0 }}
         animate={controls}
@@ -75,7 +78,6 @@ const AbstractSection = () => {
           alt="Abstract Chain Character"
           width={500}
           height={500}
-          // className="drop-shadow-lg"
         />
       </motion.div>
     </section>

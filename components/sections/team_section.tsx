@@ -39,27 +39,32 @@ const teamMembers = [
 ];
 
 export default function TeamSection() {
-  const [expandedIndex, setExpandedIndex] = useState<any>(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   return (
     <section
-      className="relative py-16 px-8 bg-cover bg-center"
-      style={{ backgroundImage: "url('/section_bg.png')" }}
+      className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 sm:px-12"
+      style={{
+        backgroundImage: "url('/section_bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
-      <h2 className="text-center text-3xl font-bold text-black mb-12">
+      <h2 className="text-center text-4xl font-bold text-black mb-8 sm:mb-12">
         Meet The Dreamers
       </h2>
-      <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl w-full justify-items-center">
         {teamMembers.map((member, index) => {
           const isExpanded = expandedIndex === index;
 
           return (
             <motion.div
               key={index}
-              className={`relative text-center rounded-lg bg-cover bg-center shadow-lg flex flex-row items-center cursor-pointer transition-all duration-500 overflow-hidden`}
+              className={`relative text-center rounded-lg bg-cover bg-center shadow-lg flex flex-col sm:flex-row items-center cursor-pointer transition-all duration-500 overflow-hidden`}
               style={{
                 backgroundImage: `url('${member.bg}')`,
-                width: isExpanded ? "600px" : "300px",
+                width: isExpanded ? "100%" : "100%",
+                maxWidth: isExpanded ? "650px" : "280px",
                 height: "400px",
                 zIndex: isExpanded ? 10 : 1,
                 padding: "20px",
@@ -81,8 +86,8 @@ export default function TeamSection() {
                 <Image
                   src={member.image}
                   alt={`${member.name} - ${member.title}`}
-                  width={isExpanded ? 400 : 340}
-                  height={isExpanded ? 460 : 334}
+                  width={isExpanded ? 380 : 280}
+                  height={isExpanded ? 460 : 340}
                   className="rounded-md object-cover"
                 />
               </motion.div>
