@@ -4,7 +4,6 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Button from "../button/button";
-import { BsDiscord } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";
 
 const AbstractSection = () => {

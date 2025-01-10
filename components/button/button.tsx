@@ -18,8 +18,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<ButtonProps> = ({
   width = 200,
   height,
-  color = "#3BB589",
-  hoverColor = "#EBB076",
+  // color = "#3BB589",
+  // hoverColor = "#EBB076",
   text = "Button",
   iconSrc,
   iconComponent,
