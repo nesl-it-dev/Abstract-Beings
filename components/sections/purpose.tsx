@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Purpose = () => {
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center text-center px-6 sm:px-10 md:px-16 lg:px-20">
+    <div className="relative w-full min-h-screen flex items-center justify-center text-center px-6 sm:px-10 md:px-16 lg:px-20 mt-[-5%] z-[-10]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -13,7 +13,7 @@ const Purpose = () => {
           layout="fill"
           objectFit="cover"
           quality={100}
-          className="w-full h-full"
+          className="w-full h-full object-bottom"
         />
       </div>
 

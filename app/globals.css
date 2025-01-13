@@ -35,3 +35,22 @@ body {
     border-image-slice: 1;
   }
 }
+
+.scroll-container::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: rgba(2, 171, 137, 0.2); /* Lighter track using provided color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #02ab89; /* Thumb color */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #028f72; /* Darker shade on hover */
+}

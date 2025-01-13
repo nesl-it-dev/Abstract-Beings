@@ -13,30 +13,36 @@ const Holders = () => {
 
   const utilities = [
     {
+      title: "The Shattering Of The Balance",
+      description: `For countless eons, the Abstract thrived, powered by the collective imagination of the worlds it touched. The Abstract Beings roamed freely, maintaining harmony and crafting new dimensions from the threads of thought. But harmony is fragile, and even the Abstract could not escape the ambitions of those who sought to control it.
+`,
+    },
+    {
       title: "NFT Licensing",
-      description: "Exclusive rights for NFT holders to monetize their assets.",
+      description: `Abstract Beings holders will gain full commercial rights to their NFTs, enabling them to license their characters for branding, merchandise, storytelling, or creative collaborations. Build your own empire with the ‘Beings’ as your cornerstone`,
     },
     {
       title: "Supporting Holder Brands and Businesses",
-      description:
-        "We assist holders in building and promoting their own brands.",
+      description: `Abstract Being is more than an NFT—it’s a partner in growth. Whether you're an 
+entrepreneur, artist, founder or visionary, we’re here to help you leverage your NFT to
+create impactful personal or business brands`,
     },
     {
-      title: "Focus on IP & Brand Building",
-      description: "Helping you expand your brand beyond the NFT space.",
+      title: "Focus on IP and Brand Building",
+      description: `Each Abstract Being is a unique identity waiting to be developed into a global intellectual property. We provide the tools and resources for holders to bring their Being’s story to life—whether it’s through art, media, or partnerships`,
     },
     {
-      title: "Exclusive Release",
-      description: "Get early access to new content and special drops.",
+      title: "Exclusive [Redacted] Release (Late Q1)",
+      description: `A never-done-before, groundbreaking opportunity awaits holders, transcending the boundaries of Abstract. More will be revealed as we step into the later stages of Q1. Stay tuned`,
     },
     {
       title: "Community Rewards",
-      description:
-        "Earn rewards and incentives for being an active community member.",
+      description: `Holders of Abstract Beings will enjoy exclusive perks and rewards, including allocations, whitelists, etc. and access to ecosystem events, and community-driven opportunities. Together, we’ll build a thriving network that redefines what it means to
+be part of an NFT project`,
     },
     {
       title: "Customized Being Development",
-      description: "Personalize and develop your unique Abstract Being.",
+      description: `Holders will be able to work with the team to personalize traits or create derivative works of their NFT, deepening the connection between holder and their Being`,
     },
   ];
 
@@ -58,7 +64,7 @@ const Holders = () => {
           layout="fill"
           objectFit="cover"
           alt="Abstract Background"
-          className="w-full h-full"
+          className="w-full h-full object-bottom"
         />
       </div>
 

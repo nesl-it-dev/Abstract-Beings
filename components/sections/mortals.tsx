@@ -10,12 +10,12 @@ const CallToMortals = () => {
           layout="fill"
           objectFit="cover"
           alt="Abstract Background"
-          className="w-full h-full"
+          className="w-full h-full object-bottom"
         />
       </div>
 
       {/* Content Box - Adjusted for responsiveness */}
-      <div className="relative md:absolute md:right-[5%] md:top-[10%] max-w-screen-lg w-full  p-6 sm:p-8 md:p-10 ">
+      <div className="relative md:absolute md:right-[15%] md:top-[10%] max-w-screen-md w-full  p-6 sm:p-8 md:p-10 max-h-[60%] overflow-y-auto scroll-container">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
           The Call To <span className="text-black text-4xl">Mortals</span>
         </h1>

@@ -10,12 +10,22 @@ import Mystical from "@/components/sections/mystical";
 import Purpose from "@/components/sections/purpose";
 import TeamSection from "@/components/sections/team_section";
 import VisionSection from "@/components/sections/vision_sections";
+import Image from "next/image";
 import React from "react";
 
 const Page = () => {
   return (
     <>
       <Hero />
+      <>
+        <Image
+          src="/hero_cracks.png"
+          width={2000}
+          height={40}
+          alt=""
+          className="mix-blend-overlay mt-[-1%]"
+        />
+      </>
       <VisionSection />
       <AbstractSection />
       <Mystical />
@@ -25,6 +35,15 @@ const Page = () => {
       <Holders />
       <TeamSection />
       <FAQ />
+      <>
+        <Image
+          src="/collective_crack_top_white.png"
+          width={2000}
+          height={40}
+          alt=""
+          className="mb-[-4%]"
+        />
+      </>
       <AbstractCollective />
       <Footer />
     </>

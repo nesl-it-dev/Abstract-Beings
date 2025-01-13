@@ -10,7 +10,7 @@ const Footer = () => {
           src="/footer.png" // Replace with actual background image path
           layout="fill"
           alt="Abstract Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-bottom"
         />
       </div>
 

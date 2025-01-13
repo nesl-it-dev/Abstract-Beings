@@ -31,7 +31,7 @@ const AbstractSection = () => {
           src="/abstract.png"
           alt="Background Image"
           layout="fill"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-bottom"
         />
       </div>
 

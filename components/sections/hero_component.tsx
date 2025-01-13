@@ -23,7 +23,7 @@ const Hero = () => {
     scrollAmount < 5 ? 1 : Math.max(1 - (scrollAmount - 5) / 100, 0);
 
   return (
-    <div className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden border-b-black">
       {/* Header */}
       <header
         className={`fixed w-full p-4 flex justify-between items-center text-white z-50 transition-all duration-500 md:px-8 lg:px-12 xl:px-16 ${
@@ -44,10 +44,10 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <Image
-          src="/hero_img_big.png"
+          src="/hero_new.png"
           layout="fill"
           alt="Jungle Background"
-          className="object-cover"
+          className="object-cover object-bottom"
         />
       </div>
 

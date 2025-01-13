@@ -7,14 +7,14 @@ import { BsDiscord, BsTwitter } from "react-icons/bs";
 
 const AbstractCollective = () => {
   return (
-    <div className="relative w-full min-h-screen flex flex-col items-start justify-end text-white p-6">
+    <div className="relative w-full min-h-screen flex flex-col items-start  text-white p-6">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/forest_5.png"
+          src="/collective_new.png"
           layout="fill"
           alt="Abstract Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-bottom"
         />
       </div>
 
@@ -28,13 +28,13 @@ const AbstractCollective = () => {
         <Image
           src="/ghost_1.png" // Replace with your actual image path
           alt="Floating Ghost"
-          width={250}
-          height={250}
+          width={450}
+          height={450}
           objectFit="contain"
         />
       </motion.div>
 
-      <div className="max-w-5xl text-white p-9">
+      <div className="max-w-5xl text-white p-9 mt-[20%]">
         <h1 className="text-5xl font-bold mb-6">
           Join <span className="text-white">The Abstract Collective</span>
         </h1>

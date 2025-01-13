@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -39,80 +40,64 @@ const teamMembers = [
 ];
 
 export default function TeamSection() {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <section
-      className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 sm:px-12"
-      style={{
-        backgroundImage: "url('/section_bg.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="relative py-20 bg-cover bg-center w-full min-h-screen h-full"
+      style={{ backgroundImage: "url('/section_bg.png')", objectFit: "cover" }}
     >
-      <h2 className="text-center text-4xl font-bold text-black mb-8 sm:mb-12">
-        Meet The Dreamers
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl w-full justify-items-center">
-        {teamMembers.map((member, index) => {
-          const isExpanded = expandedIndex === index;
-
-          return (
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold text-black mb-10">
+          Meet The Dreamers
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6">
+          {teamMembers.map((member, index) => (
             <motion.div
               key={index}
-              className={`relative text-center rounded-lg bg-cover bg-center shadow-lg flex flex-col sm:flex-row items-center cursor-pointer transition-all duration-500 overflow-hidden`}
+              className="relative p-6 rounded-lg shadow-lg bg-cover bg-center text-white flex flex-col items-center transition-all h-[300px]"
               style={{
-                backgroundImage: `url('${member.bg}')`,
-                width: isExpanded ? "100%" : "100%",
-                maxWidth: isExpanded ? "650px" : "280px",
-                height: "400px",
-                zIndex: isExpanded ? 10 : 1,
-                padding: "20px",
-                borderRadius: "15px",
+                backgroundImage: `url(${member.bg})`,
+                width: "100%",
+                display: "flex",
               }}
               layout
-              onMouseEnter={() => setExpandedIndex(index)}
-              onMouseLeave={() => setExpandedIndex(null)}
+              whileHover={{
+                width: "150%", // Expands smoothly
+                alignItems: "flex-start", // Moves content left on hover
+                paddingLeft: "20px",
+              }}
+              transition={{
+                duration: 0.1, // Fast & consistent timing
+                ease: "linear", // No acceleration, pure smoothness
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
+              {/* Motion div for smooth fade-in image */}
               <motion.div
-                className="flex justify-center items-center"
-                layout
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  transition: "width 0.5s ease-in-out",
-                }}
+                initial={{ opacity: 0 }} // Start invisible
+                animate={{ opacity: 1 }} // Fully visible instantly
+                whileHover={{ opacity: 1 }} // Stays visible
+                transition={{ duration: 0.25, ease: "linear" }} // Consistent fade-in
+                className="flex justify-start w-full object-bottom"
               >
                 <Image
                   src={member.image}
-                  alt={`${member.name} - ${member.title}`}
-                  width={isExpanded ? 380 : 280}
-                  height={isExpanded ? 460 : 340}
-                  className="rounded-md object-cover"
+                  alt={member.name}
+                  width={isHovered ? 200 : 150}
+                  height={150}
                 />
               </motion.div>
-              {isExpanded && (
-                <motion.div
-                  className="ml-4 text-left px-4 flex flex-col justify-center"
-                  layout
-                >
-                  <h3 className="text-lg font-semibold text-black">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-gray-700">{member.title}</p>
-                  <motion.p
-                    className="mt-2 text-sm text-gray-600"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {member.description}
-                  </motion.p>
-                </motion.div>
-              )}
+
+              <h3 className="text-xl font-semibold mt-4 text-left w-full">
+                {member.name}
+              </h3>
+              <p className="text-sm text-gray-300 text-left w-full">
+                {member.title}
+              </p>
             </motion.div>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </section>
   );

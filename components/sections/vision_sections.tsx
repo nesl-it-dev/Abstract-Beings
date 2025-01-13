@@ -9,7 +9,7 @@ export default function VisionSection() {
           src="/Vision.png"
           layout="fill"
           alt="Jungle Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-bottom"
         />
       </div>
 
@@ -25,18 +25,18 @@ export default function VisionSection() {
         </div>
 
         {/* Text Content */}
-        <div className="w-full sm:w-1/2 lg:w-2/3 p-6 text-center">
+        <div className="w-full sm:w-1/2 lg:w-[55%] p-6 text-center ml-7">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Vision Of <span className="text-black text-5xl">Abstract</span>{" "}
             Being
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed font-medium">
-            Abstract Shadows isn’t just another project—it’s a movement aiming
-            to take over the Abstract Chain through our minimalistic PFPs.
-            Focused on empowering its holders through intellectual property (IP)
-            development, brand support, and revenue-sharing opportunities,
-            Abstract Shadows promises a unique blend of creativity and community
-            growth.
+            Abstract Shadows isn&apos;t just another project—it&apos;s a
+            movement aiming to take over the Abstract Chain through our
+            minimalistic PFPs. Focused on empowering its holders through
+            intellectual property (IP) development, brand support, and
+            revenue-sharing opportunities, Abstract Shadows promises a unique
+            blend of creativity and community growth.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed mt-4 font-medium">
             With its mystical minimalistic design and rich lore, Abstract

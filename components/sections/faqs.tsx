@@ -8,63 +8,61 @@ const faqs = [
   {
     question: "What are Abstract Beings?",
     answer:
-      "Abstract Beings are entities born from the Abstract Portal, a cosmic gateway where imagination shapes reality. These beings represent fragments of creativity and emotion, waiting for humans to bond with them and uncover their stories.",
+      "Abstract Beings are NFTs born from the Abstract Portal—a cosmic gateway that transforms imagination into unique entities. These Beings are not just collectibles; they’re tools for creativity, branding, and empowerment.",
   },
   {
     question: "What is the lore behind Abstract Beings?",
-    answer:
-      "Abstract Beings exist as a bridge between realms, manifesting through human creativity. Their stories unfold as they connect with their holders.",
+    answer: `Abstract Beings are entities born from the Abstract Portal, a cosmic
+gateway where imagination shapes reality. These beings represent fragments of creativity and emotion, waiting for humans to bond with them and uncover their stories`,
   },
   {
     question: "What is the Abstract Portal?",
-    answer:
-      "The Abstract Portal is the gateway that connects the mortal realm with the realm of Abstract Beings. It holds the key to infinite possibilities.",
+    answer: `Abstract Beings are entities born from the Abstract Portal, a cosmic
+gateway where imagination shapes reality. These beings represent fragments of creativity and emotion, waiting for humans to bond with them and uncover their stories`,
   },
   {
     question: "What is the Supply, Mint Price & Date?",
-    answer:
-      "Details regarding the minting process, pricing, and supply will be revealed soon.",
+    answer: "Supply – 3K; Price – TBD; Date – TBD",
   },
   {
     question: "What utilities do Abstract Beings offer?",
-    answer:
-      "They grant access to exclusive rewards, brand-building support, and other benefits.",
+    answer: `Abstract Beings holders enjoy: \n
+. NFT Licensing: Full commercial rights to use your NFT for branding, merchandise, or creative projects. \n
+. Personal and Business Growth: Guidance on turning your NFT into a recognizable brand or business asset. \n
+. Community Rewards: Exclusive perks, collaborations, and a supportive network. \n
+. Revenue from *Redacted*: Coming Soon`,
   },
   {
     question: "Are there rewards for holding Abstract Beings long-term?",
-    answer:
-      "Yes, long-term holders will receive exclusive perks, rewards, and priority access to future releases.",
+    answer: `Yes! Long-term holders will gain access to exclusive collaboration rewards, partnership rewards, and community-driven benefits that grow with the ecosystem. Additionally, revenue from *redacted* will be shared amongst the holders on per project basis`,
   },
   {
     question:
       "How will Abstract Beings help holders grow their brands or businesses?",
-    answer:
-      "Abstract Beings offer a platform for creative collaboration, brand-building, and business growth by connecting with a network of like-minded individuals.",
+    answer: `We aim to provide guidance and opportunities for holders to leverage their NFTs as assets for branding, storytelling, merchandise, etc. Whether you’re a creator, entrepreneur, builder, founder or dreamer, we’re here to help you use Abstract Beings to build your vision.`,
   },
   {
     question: "Will there be workshops or brainstorming sessions for holders?",
     answer:
-      "Yes, we plan to hold interactive workshops, brainstorming sessions, and collaborative events for holders to enhance their creative journey.",
+      "Yes! We’ll host virtual sessions focused on helping holders identify how their Abstract Being can be leveraged for personal and professional growth. These sessions will cover branding, storytelling, and escaping the traditional 9-5 structure.",
   },
   {
     question: "What does it mean to be a Chosen One or Summoned?",
-    answer:
-      "Being a 'Chosen One' or 'Summoned' means you have been selected to take part in an exclusive Abstract Beings event or storyline.",
+    answer: `The role of ‘Chosen Ones’ will be given to our OG supporters who play a vital role in shaping the project from the start.
+Summoned’ role will be given to whitelist members for a guaranteed mint of Abstract Beings`,
   },
   {
     question: "Who designed the Abstract Beings?",
-    answer:
-      "The Abstract Beings were created by a team of visionary artists and storytellers passionate about blending art, technology, and imagination.",
+    answer: `The Abstract Beings are crafted by our Portal Artisan (Leah), a visionary artist specializing in minimalist and mystical 3D art. Her designs bring the Abstract realm to life`,
   },
   {
     question: "How do I mint an Abstract Being?",
-    answer:
-      "Details on the minting process will be shared soon. Stay tuned for updates on how to get your Abstract Being.",
+    answer: `The minting process will be simple and user-friendly. Detailed instructions will be shared closer to the mint date. Stay tuned on Discord and Twitter for updates`,
   },
   {
     question: "How can I be part of the Abstract Beings journey?",
     answer:
-      "Join the Abstract Beings community, engage with our events, and follow our roadmap to immerse yourself in the journey.",
+      "Join our community on Discord and Twitter, where you’ll connect with like-minded individuals, brainstorm ideas, and collaborate on creative and entrepreneurial ventures",
   },
 ];
 

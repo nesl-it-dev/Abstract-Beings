@@ -7,12 +7,12 @@ const Mystical = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/dimention_forest.png"
+          src="/abstract_new.png"
           alt="Mystical Image"
           layout="fill"
           objectFit="cover"
           quality={100}
-          className="w-full h-full"
+          className="w-full h-full object-bottom"
         />
       </div>
 
