@@ -48,6 +48,7 @@ const Hero = () => {
           fill
           alt="Jungle Background"
           className="object-cover object-bottom"
+          loading="eager"
         />
       </div>
 
@@ -59,6 +60,7 @@ const Hero = () => {
           height={500}
           alt="Title"
           className="w-52 sm:w-60 md:w-72 lg:w-80 xl:w-[500px]"
+          loading="eager"
         />
       </div>
 
@@ -74,11 +76,12 @@ const Hero = () => {
           height={250}
           alt="Character"
           className="w-24 sm:w-32 md:w-40 lg:w-48 xl:w-[250px]"
+          loading="eager"
         />
       </motion.div>
 
       {/* Enable Sound Button */}
-      <div className="absolute bottom-10 md:bottom-16 lg:bottom-20 right-5 md:right-10 lg:right-14 bg-transparent text-white text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md shadow-lg hover:text-peach cursor-pointer">
+      <div className="absolute bottom-10 md:bottom-16 lg:bottom-20 right-5 md:right-10 lg:right-14 bg-transparent text-white text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md  hover:text-peach cursor-pointer">
         Enable Sound
       </div>
     </div>

@@ -11,6 +11,7 @@ const Footer = () => {
           layout="fill"
           alt="Abstract Background"
           className="w-full h-full object-cover object-bottom"
+          loading="eager"
         />
       </div>
 

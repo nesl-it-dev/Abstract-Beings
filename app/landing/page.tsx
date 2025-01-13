@@ -24,6 +24,7 @@ const Page = () => {
           height={40}
           alt=""
           className="mix-blend-overlay mt-[-1%]"
+          loading="eager"
         />
       </>
       <VisionSection />
@@ -42,6 +43,7 @@ const Page = () => {
           height={40}
           alt=""
           className="mb-[-4%]"
+          loading="eager"
         />
       </>
       <AbstractCollective />

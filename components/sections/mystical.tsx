@@ -12,6 +12,7 @@ const Mystical = () => {
           fill
           quality={100}
           className="object-cover object-bottom"
+          loading="eager"
         />
       </div>
 

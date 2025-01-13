@@ -11,6 +11,7 @@ const CallToMortals = () => {
           objectFit="cover"
           alt="Abstract Background"
           className="w-full h-full object-bottom"
+          loading="eager"
         />
       </div>
 

@@ -31,6 +31,7 @@ const AbstractSection = () => {
           alt="Background Image"
           fill
           className="w-full h-full object-cover object-bottom"
+          loading="eager"
         />
       </div>
 
@@ -80,6 +81,7 @@ const AbstractSection = () => {
           width={500}
           height={500}
           className="w-3/4 md:w-full lg:max-w-[500px]"
+          loading="eager"
         />
       </motion.div>
     </section>

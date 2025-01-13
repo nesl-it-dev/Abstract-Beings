@@ -65,6 +65,7 @@ be part of an NFT project`,
           objectFit="cover"
           alt="Abstract Background"
           className="w-full h-full object-bottom"
+          loading="eager"
         />
       </div>
 
@@ -122,6 +123,7 @@ be part of an NFT project`,
                   objectFit="cover"
                   alt="Modal Background"
                   className="w-full h-full"
+                  loading="eager"
                 />
               </div>
 

@@ -11,6 +11,7 @@ const HeroTest = () => {
           layout="fill"
           alt="Jungle Background"
           className="h-full w-full object-cover"
+          loading="eager"
         />
       </div>
 
@@ -23,6 +24,7 @@ const HeroTest = () => {
           height={400} // Adjust height if needed
           alt="Jungle Wrap"
           //   className="mix-blend-overlay"
+          loading="eager"
         />
       </div>
 
@@ -50,7 +52,7 @@ const HeroTest = () => {
       </motion.div>
 
       {/* Enable Sound Button */}
-      <button className="absolute bottom-40 right-10 text-white text-3xl font-semibold px-4 py-2 rounded-md shadow-lg">
+      <button className="absolute bottom-40 right-10 text-white text-3xl font-semibold px-4 py-2 rounded-md">
         Enable Sound
       </button>
     </div>

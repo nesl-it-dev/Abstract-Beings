@@ -53,6 +53,7 @@ const Page = () => {
         objectFit="cover"
         quality={100}
         className="z-0 object-bottom"
+        loading="eager"
       />
 
       {/* Floating Casper */}
@@ -68,6 +69,7 @@ const Page = () => {
           width={300} // Adjusted for better alignment
           height={300}
           quality={100}
+          loading="eager"
         />
       </motion.div>
 

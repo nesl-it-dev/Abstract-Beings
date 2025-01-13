@@ -93,6 +93,7 @@ export default function TeamSection() {
                     className={`rounded-md object-cover transition-all duration-500 ease-in-out ${
                       isExpanded ? "opacity-0" : "opacity-100"
                     }`}
+                    loading="eager"
                   />
 
                   {/* Secondary image with fade-in effect when expanded */}

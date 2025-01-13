@@ -10,6 +10,7 @@ export default function VisionSection() {
           fill
           alt="Jungle Background"
           className="w-full h-full object-cover object-bottom"
+          loading="eager"
         />
       </div>
 
@@ -22,6 +23,7 @@ export default function VisionSection() {
             width={500}
             height={500}
             className="w-3/4 sm:w-1/2 lg:w-full"
+            loading="eager"
           />
         </div>
 

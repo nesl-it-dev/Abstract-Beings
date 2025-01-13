@@ -9,7 +9,7 @@ const orbitron = Orbitron({
 
 export const metadata: Metadata = {
   title: "Abstract Beings",
-  description: "Welcome to the jungle",
+  description: "Welcome to the jungle ",
 };
 
 export default function RootLayout({

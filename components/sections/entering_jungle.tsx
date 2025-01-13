@@ -29,6 +29,7 @@ export default function AbstractJungle() {
           alt="Casper Ghost"
           width={150}
           height={150}
+          loading="eager"
         />
       </motion.div>
 

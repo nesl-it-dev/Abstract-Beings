@@ -44,6 +44,7 @@ const ResponsiveBackgroundImage: React.FC<ResponsiveBackgroundImageProps> = ({
           fill
           className="w-full h-full object-cover"
           priority
+          loading="eager"
         />
       </picture>
     </div>

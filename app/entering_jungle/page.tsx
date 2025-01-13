@@ -70,7 +70,7 @@ export default function Home() {
         </video>
 
         {/* Overlay */}
-        <div className="absolute w-full h-full bg-black bg-opacity-50 flex items-center justify-center px-4">
+        <div className="absolute w-full h-full  flex items-center justify-center px-4">
           {!enterPortal && (
             <div className="flex flex-col gap-10 justify-center items-center">
               <Image
@@ -79,6 +79,7 @@ export default function Home() {
                 height={600}
                 alt="Title"
                 className="w-60 md:w-96 lg:w-[300px] mx-auto"
+                loading="eager"
               />
               <Button
                 text="Enter the portal"
@@ -112,7 +113,7 @@ export default function Home() {
               )}
 
               {/* Enable Sound Button */}
-              <div className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md shadow-lg hover:text-peach cursor-pointer bg-transparent">
+              <div className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md  hover:text-peach cursor-pointer">
                 Enable Sound
               </div>
 
@@ -125,13 +126,14 @@ export default function Home() {
                     height={600}
                     alt="Title"
                     className="w-60 md:w-96 lg:w-[300px] mx-auto"
+                    loading="eager"
                   />
                   <div className="flex flex-col justify-center items-center">
                     <input
                       type="text"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      className="w-[400px] px-6 py-3 text-3xl rounded-lg outline-none text-black bg-green-100 bg-opacity-35 mt-12"
+                      className="w-[400px] xl:px-6 xl:py-3 text-xl rounded-lg outline-none text-black bg-green-100 bg-opacity-35 mt-12"
                     />
                     {error && (
                       <p className="text-red-500 mt-2">Oops! Wrong password.</p>

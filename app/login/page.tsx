@@ -85,7 +85,7 @@ export default function Page() {
             )}
 
             {/* Enable Sound Button */}
-            <div className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md shadow-lg hover:text-peach cursor-pointer bg-transparent">
+            <div className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md  hover:text-peach cursor-pointer">
               Enable Sound
             </div>
 
@@ -99,6 +99,7 @@ export default function Page() {
                   height={600}
                   alt="Title"
                   className="w-60 md:w-96 lg:w-[500px] mx-auto"
+                  loading="eager"
                 />
                 <div className="flex flex-col justify-center items-center">
                   <input
