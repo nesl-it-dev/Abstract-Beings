@@ -23,7 +23,7 @@ const AbstractCollective = () => {
         initial={{ y: 0 }}
         animate={{ y: [0, -15, 0] }} // Floating effect
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-40 right-40"
+        className="absolute top-10 right-5 xl:top-40 xl:right-40"
       >
         <Image
           src="/ghost_1.png" // Replace with your actual image path
@@ -35,7 +35,7 @@ const AbstractCollective = () => {
       </motion.div>
 
       <div className="max-w-5xl text-white p-9 mt-[20%]">
-        <h1 className="text-5xl font-bold mb-6">
+        <h1 className="text-3xl xl:text-5xl font-bold mb-6">
           Join <span className="text-white">The Abstract Collective</span>
         </h1>
         <p className="text-lg text-gray-300 mb-6">
