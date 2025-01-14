@@ -55,7 +55,7 @@ const Hero = () => {
       {/* Main Content */}
       <div className="relative top-[12%] md:top-[18%] lg:top-[20%] text-center text-white px-4">
         <Image
-          src="/title.png"
+          src="/Title.png"
           width={500}
           height={500}
           alt="Title"
