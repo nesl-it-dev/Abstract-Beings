@@ -57,36 +57,41 @@ export default function Home() {
           className="absolute w-full h-full object-cover object-center"
           // onTimeUpdate={(e: any) => setCurrentTime(e.target.currentTime)}
         >
-          <source src="/output.mp4" type="video/mp4" />
+          <source src="/video/index.m3u8" type="video/m3u8" />
         </video>
 
         {/* Overlay */}
         <div className="absolute w-full h-full  flex items-center justify-center px-4">
-          {!enterPortal && (
-            <div className="flex flex-col gap-10 justify-center items-center">
-              <Image
-                src="/abstract_beign.png"
-                width={600}
-                height={600}
-                alt="Title"
-                className="w-60 md:w-96 lg:w-[300px] mx-auto"
-                loading="eager"
-                priority
-                quality={20}
-              />
-              <Button
-                text="Enter the portal"
-                onClick={() => setEnterPortal(true)}
-              />
-            </div>
-          )}
+          {/* {!enterPortal && ( */}
+          <div
+            className={`flex flex-col gap-10 justify-center items-center ${
+              !enterPortal ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <Image
+              src="/abstract_beign.png"
+              width={600}
+              height={600}
+              alt="Title"
+              className="w-60 md:w-96 lg:w-[300px] mx-auto"
+              loading="eager"
+              priority
+              quality={20}
+            />
+            <Button
+              text="Enter the portal"
+              onClick={() => setEnterPortal(true)}
+            />
+          </div>
+          {/* )} */}
 
-          {enterPortal && (
+          {/* {enterPortal && ( */}
+          <div className={`${enterPortal ? "opacity-100" : "opacity-0"}`}>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, ease: "easeInOut" }}
-              className="text-center text-white space-y-4 max-w-[600px]"
+              className={`text-center text-white space-y-4 max-w-[600px]`}
             >
               {/* Top-left Positioned Title */}
               <h1 className="absolute top-4 left-4 text-4xl font-bold">
@@ -145,7 +150,8 @@ export default function Home() {
                 </div>
               )}
             </motion.div>
-          )}
+          </div>
+          {/* // )} */}
         </div>
       </div>
     </>
