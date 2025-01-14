@@ -55,17 +55,16 @@ export default function Home() {
           ref={videoRef}
           muted
           className="absolute w-full h-full object-cover object-center"
-          // onTimeUpdate={(e: any) => setCurrentTime(e.target.currentTime)}
         >
-          <source src="/video/index.m3u8" type="video/m3u8" />
+          <source src="/output.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay */}
-        <div className="absolute w-full h-full  flex items-center justify-center px-4">
-          {/* {!enterPortal && ( */}
+        <div className="absolute w-full h-full flex items-center justify-center px-4">
+          {/* Enter Portal Section */}
           <div
-            className={`flex flex-col gap-10 justify-center items-center ${
-              !enterPortal ? "opacity-100" : "opacity-0"
+            className={`absolute transition-opacity duration-1000 ${
+              enterPortal ? "opacity-0 pointer-events-none" : "opacity-100"
             }`}
           >
             <Image
@@ -83,22 +82,28 @@ export default function Home() {
               onClick={() => setEnterPortal(true)}
             />
           </div>
-          {/* )} */}
 
-          {/* {enterPortal && ( */}
-          <div className={`${enterPortal ? "opacity-100" : "opacity-0"}`}>
+          {/* Password Entry Section (Uses visibility to prevent layout shifts) */}
+          <div
+            className={`absolute transition-opacity duration-1000 ${
+              enterPortal ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              visibility: enterPortal ? "visible" : "hidden",
+            }}
+          >
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, ease: "easeInOut" }}
-              className={`text-center text-white space-y-4 max-w-[600px]`}
+              className="text-center text-white space-y-4 max-w-[600px]"
             >
-              {/* Top-left Positioned Title */}
+              {/* Title */}
               <h1 className="absolute top-4 left-4 text-4xl font-bold">
                 Abstract Being
               </h1>
 
-              {/* Bottom-right Positioned Ghost Image */}
+              {/* Floating Ghost Image */}
               {!isCorrectPassword && (
                 <motion.div
                   initial={{ y: 0 }}
@@ -111,47 +116,37 @@ export default function Home() {
               )}
 
               {/* Enable Sound Button */}
-              <div className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md  hover:text-peach cursor-pointer">
+              <div className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md hover:text-peach cursor-pointer">
                 Enable Sound
               </div>
 
               {/* Password Input Box */}
-              {!isCorrectPassword && (
-                <div className="p-6">
-                  <Image
-                    src="/password_enter.png"
-                    width={600}
-                    height={600}
-                    alt="Title"
-                    className="w-60 md:w-96 lg:w-[300px] mx-auto"
-                    loading="eager"
-                    priority
-                    quality={20}
+              <div className="p-6">
+                <Image
+                  src="/password_enter.png"
+                  width={600}
+                  height={600}
+                  alt="Title"
+                  className="w-60 md:w-96 lg:w-[300px] mx-auto"
+                  loading="eager"
+                  priority
+                  quality={20}
+                />
+                <div className="flex flex-col justify-center items-center">
+                  <input
+                    type="text"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="w-[400px] xl:px-6 xl:py-3 text-xl rounded-lg outline-none text-black bg-green-100 bg-opacity-35 mt-12"
                   />
-                  <div className="flex flex-col justify-center items-center">
-                    <input
-                      type="text"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      className="w-[400px] xl:px-6 xl:py-3 text-xl rounded-lg outline-none text-black bg-green-100 bg-opacity-35 mt-12"
-                    />
-                    {error && (
-                      <p className="text-red-500 mt-2">Oops! Wrong password.</p>
-                    )}
-                    <Button
-                      text="Enter"
-                      className="mt-6"
-                      onClick={handleLogin}
-                    />
-                    <p className="text-3xl text-white mt-2 w-full">
-                      PW: ABSTRACT.BEING
-                    </p>
-                  </div>
+                  {error && (
+                    <p className="text-red-500 mt-2">Oops! Wrong password.</p>
+                  )}
+                  <Button text="Enter" className="mt-6" onClick={handleLogin} />
                 </div>
-              )}
+              </div>
             </motion.div>
           </div>
-          {/* // )} */}
         </div>
       </div>
     </>
