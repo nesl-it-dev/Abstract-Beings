@@ -17,7 +17,7 @@ const CallToMortals = () => {
 
       {/* Content Box - Adjusted for responsiveness */}
       <div className="relative md:absolute md:right-[15%] lg:right-[1%] xl:right-[15%] md:top-[10%] lg:max-w-[70%] xl:max-w-screen-md w-full  p-6 sm:p-8 md:p-10 max-h-[60%] overflow-y-auto scroll-container">
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-black mb-4">
           The Call To <span className="text-black text-4xl">Mortals</span>
         </h1>
         <p className="text-black text-sm sm:text-lg md:text-xl leading-relaxed">
@@ -36,7 +36,7 @@ const CallToMortals = () => {
           mere companionship; it is a fusion of worlds, where imagination shapes
           reality.
         </p>
-        <p className="text-gray-700 text-sm sm:text-lg md:text-xl leading-relaxed mt-4">
+        <p className="text-black text-sm sm:text-lg md:text-xl leading-relaxed mt-4">
           But this bond comes with a challenge. The Abstract Portal&apos;s
           energy is finite, and only by restoring its core can the realms be
           saved. Those who answer the portal&apos;s call are tasked with

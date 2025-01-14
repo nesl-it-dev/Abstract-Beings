@@ -40,10 +40,10 @@ const AbstractCollective = () => {
         <h1 className="text-3xl xl:text-5xl font-bold mb-6">
           Join <span className="text-white">The Abstract Collective</span>
         </h1>
-        <p className="text-lg text-gray-300 mb-6">
-          ABSTRACT BEINGS IS MORE THAN AN NFT—IT’S A COMMUNITY OF DREAMERS AND
-          CREATORS. CONNECT WITH US, SHARE IDEAS, AND SHAPE THE ABSTRACT STORY
-          TOGETHER.
+        <p className="text-lg text-white mb-6">
+          ABSTRACT BEINGS IS MORE THAN AN NFT—IT&apos;S A COMMUNITY OF DREAMERS
+          AND CREATORS. CONNECT WITH US, SHARE IDEAS, AND SHAPE THE ABSTRACT
+          STORY TOGETHER.
         </p>
 
         {/* Social Buttons - Aligned */}

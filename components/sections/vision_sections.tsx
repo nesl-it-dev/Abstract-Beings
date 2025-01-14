@@ -33,7 +33,7 @@ export default function VisionSection() {
             Vision Of <span className="text-black text-5xl">Abstract</span>{" "}
             Being
           </h2>
-          <p className="text-gray-700 text-lg leading-relaxed font-medium">
+          <p className="text-black text-lg leading-relaxed font-medium">
             Abstract Shadows isn&apos;t just another project—it&apos;s a
             movement aiming to take over the Abstract Chain through our
             minimalistic PFPs. Focused on empowering its holders through
@@ -41,7 +41,7 @@ export default function VisionSection() {
             revenue-sharing opportunities, Abstract Shadows promises a unique
             blend of creativity and community growth.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed mt-4 font-medium">
+          <p className="text-black text-lg leading-relaxed mt-4 font-medium">
             With its mystical minimalistic design and rich lore, Abstract
             Shadows invites you to join a closed-knit community that will thrive
             within the Abstract ecosystem.

@@ -8,35 +8,35 @@ const teamMembers = [
     name: "Leah",
     title: "The Portal Artisan",
     subtitle: "The hands that shape the Abstract.",
-    description:
-      "Leah is the creative genius behind the design of Abstract Beings. An excellent 3D artist with an eye for detail and a knack for bringing concepts to life, she has created the unique and mystical aesthetic that defines the Abstract realm. From glowing crowns to ethereal traits, every Being carries her signature touch of artistry and storytelling.",
+    description: `Leah is the creative genius behind the design of Abstract Beings. An excellent 3D artist with an eye for detail and a knack for bringing concepts to life, she has created the unique and mystical aesthetic that defines the Abstract realm. From glowing crowns to ethereal traits, every
+Being carries her signature touch of artistry and storytelling.`,
     image: "/team_1.png",
     bg: "/card_bg_1.png",
   },
   {
     name: "Zaki",
     title: "The Portal Master",
-    subtitle: "Seamless transitions between dimensions.",
-    description:
-      "Zaki ensures seamless transitions between dimensions and realities, making the impossible possible.",
+    subtitle: "The mind behind the magic",
+    description: `Zaki is the driving force behind Abstract Beings, weaving together its captivating lore & intricate mechanics. Abstract Beings is a result of his
+passion, commitment and experience in Crypto, NFTs & Web3 as a whole. A strong leader with a passion for storytelling & a vision to create a bridge between imagination and technology, Zaki has crafted a universe where creativity knows no bounds. As the founder, he ensures that every element of the Abstract Portal & its Beings stays true to its mystical essence, & the project stays on track for achieving future goals`,
     image: "/team_2.png",
     bg: "/card_bg_1.png",
   },
   {
     name: "Masnoon",
     title: "The Dream Weaver",
-    subtitle: "Weaving dreams into the digital space.",
+    subtitle: "The weaver of dreams into reality.",
     description:
-      "Masnoon shapes immersive experiences for everyone, turning imagination into reality.",
+      "Masnoon is a seasoned professional with a proven track record of building successful brands and businesses in Web2. His deep passion for Web3 innovation has led him to join Abstract Beings as a partner, bringing his expertise in growth and strategy to the project in order to help holders build their own brands and businesses. With a knack for turning ideas into thriving ecosystems, He plays a pivotal role in shaping the Abstract Portal into a gateway for creators and dreamers. His vision and experience ensure that Abstract Beings evolves into a cornerstone of the Web3 space",
     image: "/team_3.png",
     bg: "/card_bg_1.png",
   },
   {
     name: "Malik",
     title: "The Code Keeper",
-    subtitle: "The architect of robust solutions.",
+    subtitle: "The builder of bridges between worlds.",
     description:
-      "Malik crafts robust and elegant solutions that power the experience, ensuring stability and innovation.",
+      "Malik is the Lead Dev of Abstract Beings, ensuring the project runs seamlessly on the Abstract Chain with the help of his team of developers. With years of experience in blockchain development, Malik has worked on several successful projects, including big names like Azuki, bringing unparalleled expertise to the team. He is responsible for crafting smart contracts, integrating innovative utilities, and maintaining a robust ecosystem for the Abstract Portal",
     image: "/team_4.png",
     bg: "/card_bg_1.png",
   },
@@ -66,10 +66,12 @@ export default function TeamSection() {
           return (
             <motion.div
               key={index}
-              className="relative flex items-center rounded-lg shadow-lg overflow-hidden transition-all duration-500 cursor-pointer"
+              className={`relative flex items-center  rounded-lg shadow-lg overflow-hidden transition-all duration-500 cursor-pointer  h-[280px] w-[280px] xl:h-[350px] ${
+                isExpanded && "sm:w-[1200px]"
+              }`}
               style={{
-                width: isExpanded ? "700px" : "280px", // 700px on hover, 280px initially
-                height: "350px",
+                // width: isExpanded ? "700px" : "280px", // 700px on hover, 280px initially
+                // height: "350px",
                 backgroundImage: `url(${member.bg})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
@@ -79,22 +81,25 @@ export default function TeamSection() {
             >
               <div className="w-[320px] h-[350px]">
                 <div
-                  className="relative flex-shrink-0 p-4"
-                  style={{
-                    width: "280px",
-                    height: "350px",
-                  }}
+                  className="relative flex-shrink-0 p-4 w-[220px] h-[320px] xl:w-[280px] xl:h-[350px]"
+                  // style={{
+                  //   width: "280px",
+                  //   height: "350px",
+                  // }}
                 >
-                  <Image
-                    src={member.image}
-                    alt={`${member.name} - ${member.title}`}
-                    width={280}
-                    height={350}
-                    className={`rounded-md object-cover transition-all duration-500 ease-in-out ${
-                      isExpanded ? "opacity-0" : "opacity-100"
-                    }`}
-                    loading="eager"
-                  />
+                  <div className="relative mt-[34px] xl:mt-[0px] w-[180px] h-[200px] xl:w-[250px] xl:h-[250px]">
+                    <Image
+                      src={member.image}
+                      alt={`${member.name} - ${member.title}`}
+                      // width={280}
+                      // height={350}
+                      layout="fill"
+                      className={`rounded-md object-cover transition-all duration-500 ease-in-out  ${
+                        isExpanded ? "opacity-0" : "opacity-100"
+                      }`}
+                      loading="eager"
+                    />
+                  </div>
 
                   {/* Secondary image with fade-in effect when expanded */}
                   <div
@@ -123,7 +128,7 @@ export default function TeamSection() {
               {/* Expanded member details */}
               {isExpanded && (
                 <motion.div
-                  className="p-6 text-left overflow-auto"
+                  className="p-6 text-left overflow-auto xl:h-[360px]"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
@@ -131,10 +136,10 @@ export default function TeamSection() {
                   <h3 className="text-2xl font-semibold text-black">
                     {member.name} - {member.title}
                   </h3>
-                  <p className="text-lg font-medium text-green-600 mt-2">
-                    {/* {member.subtitle} */}
+                  <p className="text-lg font-medium text-teal mt-1">
+                    {member.subtitle}
                   </p>
-                  <p className="text-sm text-gray-700 mt-4">
+                  <p className="text-sm text-black mt-2">
                     {member.description}
                   </p>
                 </motion.div>

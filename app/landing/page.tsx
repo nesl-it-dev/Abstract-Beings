@@ -37,6 +37,19 @@ const Page = () => {
       <TeamSection />
       <FAQ />
       <>
+        {/* <div className="absolute bottom-4 left-4"> */}
+        <Image
+          src="/ghost_4.png" // Replace with actual image path
+          alt="Abstract Beings Character"
+          width={300}
+          height={300}
+          objectFit="contain"
+          loading="eager"
+          className=""
+        />
+        {/* </div> */}
+      </>
+      <>
         <Image
           src="/collective_crack_top_white.png"
           width={2000}

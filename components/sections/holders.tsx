@@ -74,7 +74,7 @@ be part of an NFT project`,
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold">
           What Awaits Holders
         </h1>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl text-green-400 font-semibold mt-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl text-teal font-semibold mt-2">
           Key Utilities For Abstract Beings
         </h2>
 
@@ -114,7 +114,7 @@ be part of an NFT project`,
             transition={{ duration: 0.3 }}
             className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm z-50 p-4"
           >
-            <div className="relative text-white max-w-lg w-full p-6 sm:p-8 rounded-lg shadow-lg overflow-hidden">
+            <div className="relative text-white max-w-2xl h-54 max-h-60 w-full p-6 sm:p-8 rounded-lg shadow-lg overflow-hidden">
               {/* Modal Background Image */}
               <div className="absolute inset-0 -z-10">
                 <Image
@@ -129,7 +129,7 @@ be part of an NFT project`,
 
               {/* Close Button */}
               <button
-                className="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl"
+                className="absolute top-3 right-3 text-black hover:text-white text-2xl"
                 onClick={closeModal}
               >
                 &times;
@@ -140,7 +140,7 @@ be part of an NFT project`,
                 <h2 className="text-2xl font-bold mb-4">
                   {modalContent.title}
                 </h2>
-                <p className="text-gray-300">{modalContent.description}</p>
+                <p className="text-white">{modalContent.description}</p>
               </div>
             </div>
           </motion.div>

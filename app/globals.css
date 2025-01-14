@@ -23,7 +23,7 @@ body {
 
 @layer components {
   .input-field {
-    @apply w-full p-3 text-lg text-gray-700 border-2 rounded-lg outline-none;
+    @apply w-full p-3 text-lg text-black border-2 rounded-lg outline-none;
     border-image-source: linear-gradient(
       307.93deg,
       rgba(0, 140, 100, 0.51) 17.13%,

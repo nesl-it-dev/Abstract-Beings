@@ -20,7 +20,7 @@ const Footer = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-black">
           Abstract Being
         </h2>
-        <p className="text-black uppercase tracking-wide text-sm md:text-lg max-w-2xl">
+        <p className="text-black uppercase tracking-wide text-sm md:text-lg max-w-4xl">
           IMAGINATION FUELS THE ABSTRACT. STEP INTO THE UNKNOWN.
         </p>
 
@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Text */}
-        <p className="text-xs md:text-sm text-gray-400 mt-6">
+        <p className="text-xs md:text-sm text-black mt-6">
           ©2025 Copyright Reserved by Abstract Being
         </p>
       </div>

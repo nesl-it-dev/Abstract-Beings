@@ -5,7 +5,7 @@ const FutureAwaits = () => {
     <div className="relative w-full min-h-screen flex flex-col items-center justify-center px-6 sm:px-10 md:px-16 lg:px-20 text-center">
       {/* Content Box */}
       <div className="max-w-3xl  p-6 sm:p-8 md:p-12">
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-black mb-4">
           The{" "}
           <span className="text-black">
             <span className="text-4xl sm:text-5xl">Future</span> Awaits
