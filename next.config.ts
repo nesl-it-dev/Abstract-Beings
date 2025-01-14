@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: ["your-image-domain.com"],
+    domains: ["i.ibb.co"],
     minimumCacheTTL: 31536000,
   },
 
