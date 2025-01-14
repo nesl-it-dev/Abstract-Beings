@@ -49,6 +49,8 @@ const Hero = () => {
           alt="Jungle Background"
           className="object-cover object-bottom"
           loading="eager"
+          priority
+          quality={80}
         />
       </div>
 
@@ -61,6 +63,8 @@ const Hero = () => {
           alt="Title"
           className="w-52 sm:w-60 md:w-72 lg:w-80 xl:w-[500px]"
           loading="eager"
+          priority
+          quality={80}
         />
       </div>
 

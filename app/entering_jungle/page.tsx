@@ -81,6 +81,7 @@ export default function Home() {
                 className="w-60 md:w-96 lg:w-[300px] mx-auto"
                 loading="eager"
                 priority
+                quality={80}
               />
               <Button
                 text="Enter the portal"
@@ -129,6 +130,7 @@ export default function Home() {
                     className="w-60 md:w-96 lg:w-[300px] mx-auto"
                     loading="eager"
                     priority
+                    quality={80}
                   />
                   <div className="flex flex-col justify-center items-center">
                     <input
