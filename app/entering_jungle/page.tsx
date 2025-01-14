@@ -57,7 +57,7 @@ export default function Home() {
           className="absolute w-full h-full object-cover object-center"
           // onTimeUpdate={(e: any) => setCurrentTime(e.target.currentTime)}
         >
-          <source src="/vortex_new.mp4" type="video/mp4" />
+          <source src="/output.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay */}
