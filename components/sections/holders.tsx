@@ -167,7 +167,9 @@ be part of an NFT project`,
                   {modalContent.title}
                 </h2>
                 {modalContent.subtitle.length > 1 && (
-                  <p className="text-xl text-teal">{modalContent.subtitle}</p>
+                  <p className="text-xl text-lightGreen">
+                    {modalContent.subtitle}
+                  </p>
                 )}
                 {modalContent.description.split("\\n").map((line, index) => (
                   <p key={index} className="text-white text-sm mt-2">
