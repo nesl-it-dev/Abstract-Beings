@@ -113,19 +113,6 @@ const FAQ = () => {
           </div>
         ))}
       </div>
-
-      {/* Bottom Left Image */}
-      {/* <div className="absolute bottom-4 left-4">
-        <Image
-          src="/ghost_4.png" // Replace with actual image path
-          alt="Abstract Beings Character"
-          width={300}
-          height={300}
-          objectFit="contain"
-          loading="eager"
-          className=""
-        />
-      </div> */}
     </div>
   );
 };

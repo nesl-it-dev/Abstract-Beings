@@ -17,7 +17,6 @@ export default function Page() {
   const handleLogin = () => {
     if (password !== correctPassword) {
       setError(true);
-      //   setTimeout(() => setError(false), 2000);
     } else {
       setError(false);
       setCorrectPassword(true);
@@ -26,7 +25,6 @@ export default function Page() {
 
   useEffect(() => {
     if (isCorrectPassword) {
-      // Redirect after 5 seconds
       if (currentTime >= 5) {
         router.push("/landing");
       }

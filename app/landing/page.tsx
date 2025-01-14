@@ -37,9 +37,8 @@ const Page = () => {
       <TeamSection />
       <FAQ />
       <>
-        {/* <div className="absolute bottom-4 left-4"> */}
         <Image
-          src="/ghost_4.png" // Replace with actual image path
+          src="/ghost_4.png"
           alt="Abstract Beings Character"
           width={300}
           height={300}
@@ -47,7 +46,6 @@ const Page = () => {
           loading="eager"
           className=""
         />
-        {/* </div> */}
       </>
       <>
         <Image

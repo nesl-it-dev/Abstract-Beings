@@ -22,12 +22,12 @@ const AbstractCollective = () => {
       {/* Floating Ghost Image */}
       <motion.div
         initial={{ y: 0 }}
-        animate={{ y: [0, -15, 0] }} // Floating effect
+        animate={{ y: [0, -15, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-10 right-5 xl:top-40 xl:right-40"
       >
         <Image
-          src="/ghost_1.png" // Replace with your actual image path
+          src="/ghost_1.png"
           alt="Floating Ghost"
           width={450}
           height={450}
@@ -46,7 +46,7 @@ const AbstractCollective = () => {
           STORY TOGETHER.
         </p>
 
-        {/* Social Buttons - Aligned */}
+        {/* Social Buttons */}
         <div className="flex space-x-4">
           <Button
             text="Twitter"

@@ -7,7 +7,7 @@ const Footer = () => {
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/footer.png" // Replace with actual background image path
+          src="/footer.png"
           layout="fill"
           alt="Abstract Background"
           className="w-full h-full object-cover object-bottom"

@@ -15,8 +15,7 @@ const Page = () => {
 
     const startProgress = () => {
       interval = setInterval(() => {
-        // Simulate random stopping
-        const increment = Math.random() < 0.3 ? 0 : 5; // 30% chance to stop
+        const increment = Math.random() < 0.3 ? 0 : 5;
         currentProgress += increment;
 
         if (currentProgress >= 100) {
@@ -25,13 +24,12 @@ const Page = () => {
         }
 
         setProgress(currentProgress);
-      }, 150); // Adjust for smooth animation (3 sec total)
+      }, 150);
 
-      // Simulate random stop at some point
       setTimeout(() => {
         clearInterval(interval);
-        setTimeout(startProgress, 500); // Pause for 0.5s then resume
-      }, Math.random() * 2000 + 500); // Randomly stop between 0.5s and 2.5s
+        setTimeout(startProgress, 500);
+      }, Math.random() * 2000 + 500);
     };
 
     startProgress();
@@ -47,7 +45,7 @@ const Page = () => {
     <div className="relative h-screen w-screen overflow-hidden bg-black">
       {/* Full-screen background image */}
       <Image
-        src="/entering_1.png" // Background Image
+        src="/entering_1.png"
         alt="Background"
         layout="fill"
         objectFit="cover"
@@ -64,9 +62,9 @@ const Page = () => {
         transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
       >
         <Image
-          src="/casper_firelight.png" // Casper Image
+          src="/casper_firelight.png"
           alt="Casper"
-          width={300} // Adjusted for better alignment
+          width={300}
           height={300}
           quality={100}
           loading="eager"

@@ -58,7 +58,6 @@ export default function TeamSection() {
         Meet The Dreamers
       </h2>
 
-      {/* Flex container that keeps items in one row */}
       <div className="flex flex-nowrap gap-6 overflow-x-auto max-w-full">
         {teamMembers.map((member, index) => {
           const isExpanded = expandedIndex === index;
@@ -70,8 +69,6 @@ export default function TeamSection() {
                 isExpanded && "sm:w-[1200px]"
               }`}
               style={{
-                // width: isExpanded ? "700px" : "280px", // 700px on hover, 280px initially
-                // height: "350px",
                 backgroundImage: `url(${member.bg})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
@@ -80,19 +77,11 @@ export default function TeamSection() {
               onMouseLeave={() => setExpandedIndex(null)}
             >
               <div className="w-[320px] h-[350px]">
-                <div
-                  className="relative flex-shrink-0 p-4 w-[220px] h-[320px] xl:w-[280px] xl:h-[350px]"
-                  // style={{
-                  //   width: "280px",
-                  //   height: "350px",
-                  // }}
-                >
+                <div className="relative flex-shrink-0 p-4 w-[220px] h-[320px] xl:w-[280px] xl:h-[350px]">
                   <div className="relative mt-[34px] xl:mt-[0px] w-[180px] h-[200px] xl:w-[250px] xl:h-[250px]">
                     <Image
                       src={member.image}
                       alt={`${member.name} - ${member.title}`}
-                      // width={280}
-                      // height={350}
                       layout="fill"
                       className={`rounded-md object-cover transition-all duration-500 ease-in-out  ${
                         isExpanded ? "opacity-0" : "opacity-100"
@@ -101,7 +90,6 @@ export default function TeamSection() {
                     />
                   </div>
 
-                  {/* Secondary image with fade-in effect when expanded */}
                   <div
                     className={`absolute top-0 left-0 w-full h-full rounded-md transition-opacity duration-500 ease-in-out ${
                       isExpanded ? "opacity-100" : "opacity-0"
@@ -113,7 +101,6 @@ export default function TeamSection() {
                     }}
                   />
 
-                  {/* Member Name and Title (visible when not expanded) */}
                   <div
                     className={`absolute bottom-0 left-0 w-full p-4 text-center text-black transition-opacity duration-500 ${
                       isExpanded ? "opacity-0" : "opacity-100"

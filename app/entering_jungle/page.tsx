@@ -12,7 +12,6 @@ export default function Home() {
   const [enterPortal, setEnterPortal] = useState(false);
   const [error, setError] = useState(false);
   const router = useRouter();
-  // const [currentTime, setCurrentTime] = useState(0);
   const correctPassword = "ABSTRACT.BEING";
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -24,14 +23,6 @@ export default function Home() {
       setCorrectPassword(true);
     }
   };
-
-  // useEffect(() => {
-  //   if (isCorrectPassword) {
-  //     if (currentTime >= 5) {
-  //       router.push("/landing");
-  //     }
-  //   }
-  // }, [isCorrectPassword, router, currentTime]);
 
   useEffect(() => {
     let id: any = null;

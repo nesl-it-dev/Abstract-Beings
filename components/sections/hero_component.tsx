@@ -11,14 +11,13 @@ const Hero = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollAmount(window.scrollY); // Track scroll position
+      setScrollAmount(window.scrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Calculate opacity based on scroll amount
   const headerOpacity =
     scrollAmount < 5 ? 1 : Math.max(1 - (scrollAmount - 5) / 100, 0);
 

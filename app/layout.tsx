@@ -4,7 +4,7 @@ import "./globals.css";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
-  variable: "--font-orbitron", // Define a CSS variable for the font
+  variable: "--font-orbitron",
 });
 
 export const metadata: Metadata = {

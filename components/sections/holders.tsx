@@ -81,18 +81,6 @@ be part of an NFT project`,
         {/* Utility Boxes Grid */}
         <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
           {utilities.map((item, index) => (
-            // <div
-            //   key={index}
-            //   className="relative px-6 py-4 bg-gray-700 bg-opacity-80 text-white text-sm sm:text-base font-semibold shadow-md border border-gray-500 hover:bg-gray-600 transition duration-300 cursor-pointer"
-            //   onClick={() => openModal(item)}
-            //   style={{
-            //     clipPath: "polygon(4% 5%, 96% 0%, 95% 95%, 2% 100%)",
-            //     borderRadius: "20px", // Slightly increased for a smoother look
-            //     backdropFilter: "blur(20px)", // Enhances background transparency effect
-            //   }}
-            // >
-            //   <span className="relative">{item.title}</span>
-            // </div>
             <button
               key={index}
               className="bg-darkGray text-white bg-opacity-80 px-6 py-2 rounded-lg border border-gray-500 shadow-lg font-semibold hover:bg-gray-600 transition duration-300"
