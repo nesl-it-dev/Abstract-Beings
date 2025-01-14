@@ -12,6 +12,7 @@ export default function Home() {
   const [enterPortal, setEnterPortal] = useState(false);
   const [error, setError] = useState(false);
   const router = useRouter();
+  // const [currentTime, setCurrentTime] = useState(0);
   const correctPassword = "ABSTRACT.BEING";
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -55,55 +56,45 @@ export default function Home() {
           ref={videoRef}
           muted
           className="absolute w-full h-full object-cover object-center"
+          // onTimeUpdate={(e: any) => setCurrentTime(e.target.currentTime)}
         >
-          <source src="/output.mp4" type="video/mp4" />
+          <source src="/vortex_new.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay */}
-        <div className="absolute w-full h-full flex items-center justify-center px-4">
-          {/* Enter Portal Section */}
-          <div
-            className={`absolute transition-opacity duration-1000 ${
-              enterPortal ? "opacity-0 pointer-events-none" : "opacity-100"
-            }`}
-          >
-            <Image
-              src="/abstract_beign.png"
-              width={600}
-              height={600}
-              alt="Title"
-              className="w-60 md:w-96 lg:w-[300px] mx-auto"
-              loading="eager"
-              priority
-              quality={20}
-            />
-            <Button
-              text="Enter the portal"
-              onClick={() => setEnterPortal(true)}
-            />
-          </div>
+        <div className="absolute w-full h-full  flex items-center justify-center px-4">
+          {!enterPortal && (
+            <div className="flex flex-col gap-10 justify-center items-center">
+              <Image
+                src="/abstract_beign.png"
+                width={600}
+                height={600}
+                alt="Title"
+                className="w-60 md:w-96 lg:w-[300px] mx-auto"
+                loading="eager"
+                priority
+                quality={50}
+              />
+              <Button
+                text="Enter the portal"
+                onClick={() => setEnterPortal(true)}
+              />
+            </div>
+          )}
 
-          {/* Password Entry Section (Uses visibility to prevent layout shifts) */}
-          <div
-            className={`absolute transition-opacity duration-1000 ${
-              enterPortal ? "opacity-100" : "opacity-0"
-            }`}
-            style={{
-              visibility: enterPortal ? "visible" : "hidden",
-            }}
-          >
+          {enterPortal && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, ease: "easeInOut" }}
               className="text-center text-white space-y-4 max-w-[600px]"
             >
-              {/* Title */}
+              {/* Top-left Positioned Title */}
               <h1 className="absolute top-4 left-4 text-4xl font-bold">
                 Abstract Being
               </h1>
 
-              {/* Floating Ghost Image */}
+              {/* Bottom-right Positioned Ghost Image */}
               {!isCorrectPassword && (
                 <motion.div
                   initial={{ y: 0 }}
@@ -116,37 +107,46 @@ export default function Home() {
               )}
 
               {/* Enable Sound Button */}
-              <div className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md hover:text-peach cursor-pointer">
+              <div className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md  hover:text-peach cursor-pointer">
                 Enable Sound
               </div>
 
               {/* Password Input Box */}
-              <div className="p-6">
-                <Image
-                  src="/password_enter.png"
-                  width={600}
-                  height={600}
-                  alt="Title"
-                  className="w-60 md:w-96 lg:w-[300px] mx-auto"
-                  loading="eager"
-                  priority
-                  quality={20}
-                />
-                <div className="flex flex-col justify-center items-center">
-                  <input
-                    type="text"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="w-[400px] xl:px-6 xl:py-3 text-xl rounded-lg outline-none text-black bg-green-100 bg-opacity-35 mt-12"
+              {!isCorrectPassword && (
+                <div className="p-6">
+                  <Image
+                    src="https://i.ibb.co/F3Gjhs3/password-enter.png"
+                    width={600}
+                    height={600}
+                    alt="Title"
+                    className="w-60 md:w-96 lg:w-[300px] mx-auto"
+                    loading="eager"
+                    priority
+                    quality={50}
                   />
-                  {error && (
-                    <p className="text-red-500 mt-2">Oops! Wrong password.</p>
-                  )}
-                  <Button text="Enter" className="mt-6" onClick={handleLogin} />
+                  <div className="flex flex-col justify-center items-center">
+                    <input
+                      type="text"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="w-[400px] xl:px-6 xl:py-3 text-xl rounded-lg outline-none text-black bg-green-100 bg-opacity-35 mt-12"
+                    />
+                    {error && (
+                      <p className="text-red-500 mt-2">Oops! Wrong password.</p>
+                    )}
+                    <Button
+                      text="Enter"
+                      className="mt-6"
+                      onClick={handleLogin}
+                    />
+                    <p className="text-3xl text-white mt-2 w-full">
+                      PW: ABSTRACT.BEING
+                    </p>
+                  </div>
                 </div>
-              </div>
+              )}
             </motion.div>
-          </div>
+          )}
         </div>
       </div>
     </>
