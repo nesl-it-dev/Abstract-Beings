@@ -115,7 +115,7 @@ export default function Home() {
               {!isCorrectPassword && (
                 <div className="p-6">
                   <Image
-                    src="https://i.ibb.co/F3Gjhs3/password-enter.png"
+                    src="/password_enter.png"
                     width={600}
                     height={600}
                     alt="Title"

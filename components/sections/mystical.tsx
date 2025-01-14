@@ -17,8 +17,8 @@ const Mystical = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl space-y-4 lg:space-y-6 pb-10 lg:pb-20 mt-10">
-        <h1 className="text-teal text-lg sm:text-xl lg:text-2xl">
+      <div className="relative z-10   max-w-3xl space-y-4 lg:space-y-6 pb-10 lg:pb-20 mt-10">
+        <h1 className="text-lightGreen text-lg sm:text-xl lg:text-2xl">
           The Lore Of Abstract Beings:
         </h1>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-4">
