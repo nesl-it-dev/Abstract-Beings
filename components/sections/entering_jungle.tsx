@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { LOADING_TEXT } from "@/utils/constants";
 
 export default function AbstractJungle() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -69,7 +70,7 @@ export default function AbstractJungle() {
 
       {/* Text */}
       <div className="absolute bottom-20 w-full text-center text-white text-2xl font-bold">
-        Entering The Abstract Jungle...
+        {LOADING_TEXT}
       </div>
     </div>
   );

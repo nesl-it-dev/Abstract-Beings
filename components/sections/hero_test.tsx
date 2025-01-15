@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { PROJECT_NAME, TOGGLE_SOUND } from "@/utils/constants";
 
 const HeroTest = () => {
   return (
@@ -30,7 +31,7 @@ const HeroTest = () => {
 
       {/* Header */}
       <header className="fixed top-0 w-full p-4 flex justify-between items-center text-white z-50">
-        <h1 className="text-xl font-bold">Abstract Being</h1>
+        <h1 className="text-xl font-bold">{PROJECT_NAME}</h1>
         <div className="flex space-x-4">
           <Image src="/twitter-icon.png" width={24} height={24} alt="Twitter" />
           <Image src="/discord-icon.png" width={24} height={24} alt="Discord" />
@@ -53,7 +54,7 @@ const HeroTest = () => {
 
       {/* Enable Sound Button */}
       <button className="absolute bottom-40 right-10 text-white text-3xl font-semibold px-4 py-2 rounded-md">
-        Enable Sound
+        {TOGGLE_SOUND}
       </button>
     </div>
   );

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { LOADING_TEXT } from "@/utils/constants";
 
 const Page = () => {
   const [progress, setProgress] = useState(0);
@@ -85,7 +86,7 @@ const Page = () => {
         <p className="text-sm">{progress}%</p>
       </div>
       <div className="absolute bottom-20 w-full text-center text-white z-20">
-        <h1 className="text-xl font-bold">Entering The Abstract Jungle...</h1>
+        <h1 className="text-xl font-bold">{LOADING_TEXT}</h1>
       </div>
     </div>
   );

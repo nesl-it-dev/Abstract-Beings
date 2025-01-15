@@ -4,10 +4,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Button from "@/components/button/button";
 import { BsDiscord, BsTwitter } from "react-icons/bs";
+import { PROJECT_NAME } from "@/utils/constants";
 
 const AbstractCollective = () => {
   return (
-    <div className="relative w-full min-h-screen flex flex-col items-start  text-white p-6">
+    <div
+      id="section_10"
+      className="relative w-full min-h-screen flex flex-col items-start  text-white p-6"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -38,7 +42,7 @@ const AbstractCollective = () => {
 
       <div className="max-w-5xl text-white p-9 mt-[20%]">
         <h1 className="text-3xl xl:text-5xl font-bold mb-6">
-          Join <span className="text-white">The Abstract Collective</span>
+          Join <span className="text-white">The {PROJECT_NAME}</span>
         </h1>
         <p className="text-lg text-white mb-6">
           ABSTRACT BEINGS IS MORE THAN AN NFT—IT&apos;S A COMMUNITY OF DREAMERS

@@ -5,15 +5,17 @@ import { motion } from "framer-motion";
 import Button from "@/components/button/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { PASSWORD, PROJECT_NAME, TOGGLE_SOUND } from "@/utils/constants";
 
 export default function Home() {
   const [password, setPassword] = useState("");
   const [isCorrectPassword, setCorrectPassword] = useState(false);
   const [enterPortal, setEnterPortal] = useState(false);
   const [error, setError] = useState(false);
+  const [videoPlay, setVideoPlay] = useState(false);
   const router = useRouter();
   // const [currentTime, setCurrentTime] = useState(0);
-  const correctPassword = "ABSTRACT.BEING";
+  const correctPassword = PASSWORD;
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const handleLogin = () => {
@@ -42,8 +44,10 @@ export default function Home() {
     if (videoRef.current) {
       if (isCorrectPassword) {
         videoRef.current.play();
+        setVideoPlay(true);
       } else {
         videoRef.current.pause();
+        setVideoPlay(false);
       }
     }
   }, [isCorrectPassword]);
@@ -61,12 +65,45 @@ export default function Home() {
           <source src="/vortex_new.mp4" type="video/mp4" />
         </video>
 
+        {!videoPlay && (
+          <>
+            <div className="absolute 2xl:top-[11.5%] 2xl:left-[24%]  xl:top-[1.8%]  xl:left-[27%] xl:w-[200px] xl:h-[50px] top-[14%] left-[20%] w-[145px] h-[35px] mr-10">
+              {/* <Image
+                src="/abstract_title.png"
+                // width={600}
+                // height={600}
+                alt="Title"
+                // className="w-60 md:w-96 lg:w-[300px] mx-auto"
+                loading="eager"
+                priority
+                quality={50}
+                fill
+              /> */}
+              <h2 className="text-4xl 2xl:text-5xl text-white">ABSTRACT</h2>
+            </div>
+            <div className="absolute 2xl:top-[11.5%] 2xl:right-[34.2%]  xl:top-[2%] xl:right-[32%] xl:w-[200px] xl:h-[60px] top-[14%] right-[30%] w-[150px] h-[35px]">
+              {/* <Image
+                src="/beign_title.png"
+                // width={300}
+                // height={300}
+                alt="Title"
+                // className="w-60 md:w-96 lg:w-[300px] mx-auto"
+                loading="eager"
+                priority
+                quality={50}
+                fill
+              /> */}
+              <h2 className="text-4xl  2xl:text-5xl text-white">BEINGS</h2>
+            </div>
+          </>
+        )}
+
         {/* Overlay */}
         <div className="absolute w-full h-full  flex items-center justify-center px-4">
           {!enterPortal && (
             <div className="flex flex-col gap-10 justify-center items-center">
-              <Image
-                src="/abstract_beign.png"
+              {/* <Image
+                src="/abstract_title.png"
                 width={600}
                 height={600}
                 alt="Title"
@@ -74,10 +111,13 @@ export default function Home() {
                 loading="eager"
                 priority
                 quality={50}
-              />
+              /> */}
               <Button
-                text="Enter the portal"
+                text="Enter the Abstract"
                 onClick={() => setEnterPortal(true)}
+                height={180}
+                width={250}
+                className="xl:mt-32"
               />
             </div>
           )}
@@ -91,7 +131,7 @@ export default function Home() {
             >
               {/* Top-left Positioned Title */}
               <h1 className="absolute top-4 left-4 text-4xl font-bold">
-                Abstract Being
+                {PROJECT_NAME}
               </h1>
 
               {/* Bottom-right Positioned Ghost Image */}
@@ -108,7 +148,7 @@ export default function Home() {
 
               {/* Enable Sound Button */}
               <div className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md  hover:text-peach cursor-pointer">
-                Enable Sound
+                {TOGGLE_SOUND}
               </div>
 
               {/* Password Input Box */}
@@ -140,7 +180,7 @@ export default function Home() {
                       onClick={handleLogin}
                     />
                     <p className="text-3xl text-white mt-2 w-full">
-                      PW: ABSTRACT.BEING
+                      PW: {PASSWORD}
                     </p>
                   </div>
                 </div>

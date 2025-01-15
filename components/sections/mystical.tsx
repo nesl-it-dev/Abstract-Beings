@@ -3,7 +3,10 @@ import Button from "@/components/button/button";
 
 const Mystical = () => {
   return (
-    <div className="relative w-full min-h-screen flex justify-center items-center text-white text-center px-6 sm:px-10 md:px-16 lg:px-20 xl:px-32 overflow-hidden">
+    <div
+      id="section_4"
+      className="relative w-full min-h-screen flex justify-center items-center text-white text-center px-6 sm:px-10 md:px-16 lg:px-20 xl:px-32 overflow-hidden"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

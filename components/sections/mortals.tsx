@@ -1,8 +1,12 @@
+import { PROJECT_NAME } from "@/utils/constants";
 import Image from "next/image";
 
 const CallToMortals = () => {
   return (
-    <div className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 sm:px-10 md:px-16 lg:px-20 text-center">
+    <div
+      id="section_6"
+      className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 sm:px-10 md:px-16 lg:px-20 text-center"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -30,7 +34,7 @@ const CallToMortals = () => {
           Abstract Beings.
         </p>
         <p className="text-black text-sm sm:text-lg md:text-xl leading-relaxed mt-4">
-          When a human bonds with an Abstract Being, a profound transformation
+          When a human bonds with an {PROJECT_NAME}, a profound transformation
           occurs. The being takes on traits of its human partner, reflecting
           their inner self—their dreams, fears, and ambitions. This bond is not
           mere companionship; it is a fusion of worlds, where imagination shapes

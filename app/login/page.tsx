@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Button from "@/components/button/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { PASSWORD, PROJECT_NAME, TOGGLE_SOUND } from "@/utils/constants";
 
 export default function Page() {
   const [password, setPassword] = useState("");
@@ -12,7 +13,7 @@ export default function Page() {
   const [error, setError] = useState(false);
   const router = useRouter();
   const [currentTime, setCurrentTime] = useState(0);
-  const correctPassword = "ABSTRACT.BEING";
+  const correctPassword = PASSWORD;
 
   const handleLogin = () => {
     if (password !== correctPassword) {
@@ -66,7 +67,7 @@ export default function Page() {
           <div className="text-center text-white space-y-4 max-w-[600px]">
             {/* Top-left Positioned Title */}
             <h1 className="absolute top-4 left-4 text-4xl font-bold">
-              Abstract Being
+              {PROJECT_NAME}
             </h1>
 
             {/* Bottom-right Positioned Ghost Image */}
@@ -84,7 +85,7 @@ export default function Page() {
 
             {/* Enable Sound Button */}
             <div className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md  hover:text-peach cursor-pointer">
-              Enable Sound
+              {TOGGLE_SOUND}
             </div>
 
             {/* Password Input Box */}

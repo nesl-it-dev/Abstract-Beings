@@ -5,15 +5,6 @@ import { useState } from "react";
 
 const teamMembers = [
   {
-    name: "Leah",
-    title: "The Portal Artisan",
-    subtitle: "The hands that shape the Abstract.",
-    description: `Leah is the creative genius behind the design of Abstract Beings. An excellent 3D artist with an eye for detail and a knack for bringing concepts to life, she has created the unique and mystical aesthetic that defines the Abstract realm. From glowing crowns to ethereal traits, every
-Being carries her signature touch of artistry and storytelling.`,
-    image: "/team_1.png",
-    bg: "/card_bg_1.png",
-  },
-  {
     name: "Zaki",
     title: "The Portal Master",
     subtitle: "The mind behind the magic",
@@ -22,6 +13,16 @@ passion, commitment and experience in Crypto, NFTs & Web3 as a whole. A strong l
     image: "/team_2.png",
     bg: "/card_bg_1.png",
   },
+  {
+    name: "Leah",
+    title: "The Portal Artisan",
+    subtitle: "The hands that shape the Abstract.",
+    description: `Leah is the creative genius behind the design of Abstract Beings. An excellent 3D artist with an eye for detail and a knack for bringing concepts to life, she has created the unique and mystical aesthetic that defines the Abstract realm. From glowing crowns to ethereal traits, every
+Being carries her signature touch of artistry and storytelling.`,
+    image: "/team_1.png",
+    bg: "/card_bg_1.png",
+  },
+
   {
     name: "Masnoon",
     title: "The Dream Weaver",
@@ -47,6 +48,7 @@ export default function TeamSection() {
 
   return (
     <section
+      id="section_8"
       className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 sm:px-12 py-12"
       style={{
         backgroundImage: "url('/section_bg.png')",

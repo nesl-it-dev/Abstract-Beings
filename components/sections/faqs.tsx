@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { PROJECT_NAME } from "@/utils/constants";
 
 const faqs = [
   {
@@ -33,7 +34,7 @@ gateway where imagination shapes reality. These beings represent fragments of cr
   },
   {
     question: "Are there rewards for holding Abstract Beings long-term?",
-    answer: `Yes! Long-term holders will gain access to exclusive collaboration rewards, partnership rewards, and community-driven benefits that grow with the ecosystem. Additionally, revenue from *redacted* will be shared amongst the holders on per project basis`,
+    answer: `Yes! Long-term holders will gain access to exclusive collaboration rewards, partnership rewards, and community-driven benefits that grow with the ecosystem.`,
   },
   {
     question:
@@ -42,8 +43,7 @@ gateway where imagination shapes reality. These beings represent fragments of cr
   },
   {
     question: "Will there be workshops or brainstorming sessions for holders?",
-    answer:
-      "Yes! We’ll host virtual sessions focused on helping holders identify how their Abstract Being can be leveraged for personal and professional growth. These sessions will cover branding, storytelling, and escaping the traditional 9-5 structure.",
+    answer: `Yes! We’ll host virtual sessions focused on helping holders identify how their ${PROJECT_NAME} can be leveraged for personal and professional growth. These sessions will cover branding, storytelling, and escaping the traditional 9-5 structure.`,
   },
   {
     question: "What does it mean to be a Chosen One or Summoned?",
@@ -55,7 +55,7 @@ Summoned’ role will be given to whitelist members for a guaranteed mint of Abs
     answer: `The Abstract Beings are crafted by our Portal Artisan (Leah), a visionary artist specializing in minimalist and mystical 3D art. Her designs bring the Abstract realm to life`,
   },
   {
-    question: "How do I mint an Abstract Being?",
+    question: `How do I mint an ${PROJECT_NAME}?`,
     answer: `The minting process will be simple and user-friendly. Detailed instructions will be shared closer to the mint date. Stay tuned on Discord and Twitter for updates`,
   },
   {
@@ -73,7 +73,10 @@ const FAQ = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col items-center justify-center px-6 pt-32 pb-3">
+    <div
+      id="section_9"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center px-6 pt-32 pb-3"
+    >
       {/* Title */}
       <h1 className="text-3xl font-bold text-center text-black mb-8">
         Your Questions Answered

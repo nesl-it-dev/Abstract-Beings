@@ -1,10 +1,14 @@
 "use client";
 
+import { PROJECT_NAME } from "@/utils/constants";
 import Image from "next/image";
 
 const Purpose = () => {
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center text-center px-6 sm:px-10 md:px-16  xl:px-32 mt-[-5%] z-[-10]">
+    <div
+      id="section_5"
+      className="relative w-full min-h-screen flex items-center justify-center text-center px-6 sm:px-10 md:px-16  xl:px-32 mt-[-5%] z-[-10]"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -31,7 +35,7 @@ const Purpose = () => {
           echoes of emotions that mortals and other entities once imagined.
         </p>
         <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mt-4">
-          Each Abstract Being is shaped by the raw energy of the portal and the
+          Each {PROJECT_NAME} is shaped by the raw energy of the portal and the
           stories whispered into its realm. Some are serene and luminous,
           embodying hope and clarity. Others are chaotic and fractured,
           reflections of conflict and despair. Together, they are the guardians
