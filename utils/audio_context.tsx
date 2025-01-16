@@ -16,15 +16,19 @@ export const AudioProvider = ({ children }: any) => {
   const [audio, setAudio] = useState<any>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  useEffect(() => {
-    const audioInstance: any = new Audio("/fairy_tale.mp3");
-    audioInstance.loop = true;
-    setAudio(audioInstance);
+  const audioInstance: any = new Audio("/fairy_tale.mp3");
+  audioInstance.loop = true;
+  setAudio(audioInstance);
 
-    return () => {
-      audioInstance.pause();
-    };
-  }, []);
+  //   useEffect(() => {
+  //     const audioInstance: any = new Audio("/fairy_tale.mp3");
+  //     audioInstance.loop = true;
+  //     setAudio(audioInstance);
+
+  //     return () => {
+  //       audioInstance.pause();
+  //     };
+  //   }, []);
 
   const playAudio = () => {
     if (audio) {
