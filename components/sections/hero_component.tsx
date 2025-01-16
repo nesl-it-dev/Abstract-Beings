@@ -11,6 +11,9 @@ import { useAudio } from "@/utils/audio_context";
 const Hero = () => {
   const [scrollAmount, setScrollAmount] = useState(0);
   const { isPlaying, playAudio, stopAudio } = useAudio();
+  useEffect(() => {
+    console.log("Is palying inside hero compponent");
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {

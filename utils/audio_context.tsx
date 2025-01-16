@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { getAudioInstance } from "./audio_player";
 
 let audioInstance: any;
@@ -35,6 +35,9 @@ export const AudioProvider = ({ children }: any) => {
   //     };
   //   }, []);
 
+  useEffect(() => {
+    console.log("Is playing changed", isPlaying);
+  }, [isPlaying]);
   const playAudio = () => {
     // if (audio) {
     const audio = getAudioInstance();
