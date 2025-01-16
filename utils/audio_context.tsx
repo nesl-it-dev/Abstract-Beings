@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState } from "react";
+import { getAudioInstance } from "./audio_player";
 
 let audioInstance: any;
 
@@ -15,14 +16,14 @@ export const useAudio = () => {
 };
 
 export const AudioProvider = ({ children }: any) => {
-  const [audio, setAudio] = useState<any>(null);
+  //   const [audio, setAudio] = useState<any>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  if (typeof window !== "undefined" && !audioInstance) {
-    audioInstance = new Audio("/fairy_tale.mp3");
-    audioInstance.loop = true;
-    setAudio(audioInstance);
-  }
+  //   if (typeof window !== "undefined" && !audioInstance) {
+  //     audioInstance = new Audio("/fairy_tale.mp3");
+  //     audioInstance.loop = true;
+  //     setAudio(audioInstance);
+  //   }
 
   //   useEffect(() => {
   //     const audioInstance: any = new Audio("/fairy_tale.mp3");
@@ -35,17 +36,19 @@ export const AudioProvider = ({ children }: any) => {
   //   }, []);
 
   const playAudio = () => {
-    if (audio) {
-      audio.play();
-      setIsPlaying(true);
-    }
+    // if (audio) {
+    const audio = getAudioInstance();
+    audio.play();
+    setIsPlaying(true);
+    // }
   };
 
   const stopAudio = () => {
-    if (audio) {
-      audio.pause();
-      setIsPlaying(false);
-    }
+    // if (audio) {
+    const audio = getAudioInstance();
+    audio.pause();
+    setIsPlaying(false);
+    // }
   };
 
   return (
