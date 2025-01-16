@@ -5,7 +5,13 @@ import { motion } from "framer-motion";
 import Button from "@/components/button/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { PASSWORD, PROJECT_NAME, TOGGLE_SOUND } from "@/utils/constants";
+import {
+  DISABLE_SOUND,
+  PASSWORD,
+  // PROJECT_NAME,
+  TOGGLE_SOUND,
+} from "@/utils/constants";
+import { useAudio } from "@/utils/audio_context";
 
 export default function Home() {
   const [password, setPassword] = useState("");
@@ -17,6 +23,7 @@ export default function Home() {
   // const [currentTime, setCurrentTime] = useState(0);
   const correctPassword = PASSWORD;
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const { isPlaying, playAudio, stopAudio } = useAudio();
 
   const handleLogin = () => {
     if (password !== correctPassword) {
@@ -130,9 +137,9 @@ export default function Home() {
               className="text-center text-white space-y-4 max-w-[600px]"
             >
               {/* Top-left Positioned Title */}
-              <h1 className="absolute top-4 left-4 text-4xl font-bold">
+              {/* <h1 className="absolute top-4 left-4 text-4xl font-bold">
                 {PROJECT_NAME}
-              </h1>
+              </h1> */}
 
               {/* Bottom-right Positioned Ghost Image */}
               {!isCorrectPassword && (
@@ -147,8 +154,11 @@ export default function Home() {
               )}
 
               {/* Enable Sound Button */}
-              <div className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md  hover:text-peach cursor-pointer">
-                {TOGGLE_SOUND}
+              <div
+                className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md  hover:text-peach cursor-pointer"
+                onClick={isPlaying ? stopAudio : playAudio}
+              >
+                {isPlaying ? DISABLE_SOUND : TOGGLE_SOUND}
               </div>
 
               {/* Password Input Box */}

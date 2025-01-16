@@ -3,6 +3,7 @@ import { Orbitron } from "next/font/google";
 import "./globals.css";
 import PageTransition from "@/components/page_transition/pageTransition";
 import { PROJECT_NAME } from "@/utils/constants";
+import { AudioProvider } from "@/utils/audio_context";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -22,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${orbitron.variable} antialiased`}>
-        <PageTransition>{children}</PageTransition>
+        <AudioProvider>
+          <PageTransition>{children}</PageTransition>
+        </AudioProvider>
       </body>
     </html>
   );
