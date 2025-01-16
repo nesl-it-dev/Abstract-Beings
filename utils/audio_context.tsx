@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { getAudioInstance } from "./audio_player";
 
-let audioInstance: any;
+// let audioInstance: any;
 
 const AudioContext = createContext({
   isPlaying: false,
@@ -35,9 +35,6 @@ export const AudioProvider = ({ children }: any) => {
   //     };
   //   }, []);
 
-  useEffect(() => {
-    console.log("Is playing changed", isPlaying);
-  }, [isPlaying]);
   const playAudio = () => {
     // if (audio) {
     const audio = getAudioInstance();

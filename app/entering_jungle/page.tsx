@@ -24,9 +24,6 @@ export default function Home() {
   const correctPassword = PASSWORD;
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const { isPlaying, playAudio, stopAudio } = useAudio();
-  useEffect(() => {
-    console.log("Is palying inside hero compponent");
-  }, []);
 
   const handleLogin = () => {
     if (password !== correctPassword) {
