@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -11,71 +10,46 @@ const Page = () => {
   const router = useRouter();
 
   useEffect(() => {
-    let currentProgress = 0;
-    let interval: any;
+    const interval = setInterval(() => {
+      setProgress((prevProgress) => {
+        const nextProgress = prevProgress + 10;
 
-    const startProgress = () => {
-      interval = setInterval(() => {
-        const increment = Math.random() < 0.3 ? 0 : 5;
-        currentProgress += increment;
-
-        if (currentProgress >= 100) {
+        if (nextProgress >= 100) {
           clearInterval(interval);
-          currentProgress = 100;
+          return 100;
         }
 
-        setProgress(currentProgress);
-      }, 150);
+        return nextProgress;
+      });
+    }, 150);
 
-      setTimeout(() => {
-        clearInterval(interval);
-        setTimeout(startProgress, 500);
-      }, Math.random() * 2000 + 500);
-    };
-
-    startProgress();
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     if (progress === 100) {
-      router.push("/entering_jungle");
+      setTimeout(() => {
+        router.push("/entering_jungle");
+      }, 500);
     }
   }, [progress]);
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden bg-black">
-      {/* Full-screen background image */}
-      <Image
-        src="/entering_1.png"
-        alt="Background"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        className="z-0 object-bottom"
-        loading="eager"
-      />
-
-      {/* Floating Casper */}
-      <motion.div
-        className="absolute bottom-24 left-[40%] transform -translate-x-[40%] z-10"
-        initial={{ y: -10 }}
-        animate={{ y: 10 }}
-        transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
+    <div className="relative h-screen w-screen overflow-hidden">
+      <video
+        autoPlay
+        muted
+        loop
+        className="absolute w-full h-full object-cover lg:object-[50%_20%] xl:object-[0%_15%] 2xl:object-[0%_20%]"
       >
-        <Image
-          src="/casper_firelight.png"
-          alt="Casper"
-          width={300}
-          height={300}
-          quality={100}
-          loading="eager"
-        />
-      </motion.div>
+        <source src="/new-loading_3.mp4" type="video/mp4" />
+      </video>
 
       {/* Progress Bar */}
       <div className="absolute bottom-16 w-3/4 left-1/2 transform -translate-x-1/2 bg-gray-800 rounded-full h-2">
         <motion.div
           className="bg-green-500 h-2 rounded-full"
+          initial={{ width: "0%" }}
           animate={{ width: `${progress}%` }}
           transition={{ ease: "linear" }}
         />
