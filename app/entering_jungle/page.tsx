@@ -72,7 +72,7 @@ export default function Home() {
           <source src="/vortex_new.mp4" type="video/mp4" />
         </video>
         <div className="absolute w-full h-full bg-black z-[100] bg-opacity-70 flex items-center justify-center lg:hidden">
-          <h2 className="text-2xl md:text-4xl text-white text-center">
+          <h2 className="text-2xl md:text-4xl text-white text-center font-orbitron font-bold">
             Switch to Desktop
           </h2>
         </div>

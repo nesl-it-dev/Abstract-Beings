@@ -16,6 +16,9 @@ export default {
         darkGray: "#464C4A",
         peach: "#EBB076",
       },
+      fontFamily: {
+        orbitron: ["var(--font-orbitron)", "sans-serif"],
+      },
       backgroundImage: {
         "custom-radial":
           "radial-gradient(circle, rgba(10, 17, 14, 0.95) 0.09%, rgba(13, 28, 27, 0.95) 85.76%, rgba(14, 12, 7, 0.95) 101.74%)",
