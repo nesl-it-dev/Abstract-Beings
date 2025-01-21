@@ -75,7 +75,7 @@ export default function Home() {
           width={500}
           height={100}
           alt="Not Found"
-          src={"/Image_To_Show.png"}
+          src={"/Image_To_Show.webp"}
           quality={30}
           className="lg:hidden absolute w-full h-full object-cover object-center"
         />
