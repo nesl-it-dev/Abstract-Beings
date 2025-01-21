@@ -71,6 +71,11 @@ export default function Home() {
         >
           <source src="/vortex_new.mp4" type="video/mp4" />
         </video>
+        <div className="absolute w-full h-full bg-black z-[100] bg-opacity-70 flex items-center justify-center lg:hidden">
+          <h2 className="text-2xl md:text-4xl text-white text-center">
+            Switch to Desktop
+          </h2>
+        </div>
 
         {!videoPlay && (
           <>
@@ -86,7 +91,9 @@ export default function Home() {
                 quality={50}
                 fill
               /> */}
-              <h2 className="text-4xl 2xl:text-5xl text-white">ABSTRACT</h2>
+              <h2 className="text-4xl 2xl:text-5xl text-white hidden lg:block">
+                ABSTRACT
+              </h2>
             </div>
             <div className="absolute 2xl:top-[11.5%] 2xl:right-[34.2%]  xl:top-[2%] xl:right-[32%] xl:w-[200px] xl:h-[60px] top-[14%] right-[30%] w-[150px] h-[35px]">
               {/* <Image
@@ -100,7 +107,9 @@ export default function Home() {
                 quality={50}
                 fill
               /> */}
-              <h2 className="text-4xl  2xl:text-5xl text-white">BEINGS</h2>
+              <h2 className="text-4xl  2xl:text-5xl text-white hidden lg:block">
+                BEINGS
+              </h2>
             </div>
           </>
         )}
