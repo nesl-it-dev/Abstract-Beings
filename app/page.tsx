@@ -26,13 +26,13 @@ const Page = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // useEffect(() => {
-  //   if (progress === 100) {
-  //     setTimeout(() => {
-  //       router.push("/entering_jungle");
-  //     }, 500);
-  //   }
-  // }, [progress]);
+  useEffect(() => {
+    if (progress === 100) {
+      setTimeout(() => {
+        router.push("/entering_jungle");
+      }, 500);
+    }
+  }, [progress]);
 
   return (
     <div className="relative h-screen w-screen overflow-hidden">
