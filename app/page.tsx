@@ -26,24 +26,32 @@ const Page = () => {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    if (progress === 100) {
-      setTimeout(() => {
-        router.push("/entering_jungle");
-      }, 500);
-    }
-  }, [progress]);
+  // useEffect(() => {
+  //   if (progress === 100) {
+  //     setTimeout(() => {
+  //       router.push("/entering_jungle");
+  //     }, 500);
+  //   }
+  // }, [progress]);
 
   return (
     <div className="relative h-screen w-screen overflow-hidden">
-      <video
-        autoPlay
-        muted
-        loop
-        className="absolute w-full h-full object-cover lg:object-[50%_20%] xl:object-[0%_15%] 2xl:object-[0%_20%]"
-      >
-        <source src="/new-loading_3.mp4" type="video/mp4" />
-      </video>
+      <div className="flex w-screen h-screen">
+        <div className="flex-1 bg-custom-radial">1</div>
+
+        <div className="flex items-center justify-center h-screen">
+          <video
+            autoPlay
+            muted
+            loop
+            className=" w-[100vh] h-[100vh] object-cover"
+          >
+            <source src="/Video_To_Show.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div className="flex-1 bg-custom-radial">3</div>
+      </div>
 
       {/* Progress Bar */}
       <div className="absolute bottom-16 w-3/4 left-1/2 transform -translate-x-1/2 bg-gray-800 rounded-full h-2">
