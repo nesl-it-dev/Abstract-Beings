@@ -76,7 +76,7 @@ export default function Home() {
           height={100}
           alt="Not Found"
           src={"/Image_To_Show.png"}
-          quality={60}
+          quality={30}
           className="lg:hidden absolute w-full h-full object-cover object-center"
         />
         <div className="absolute w-full h-full bg-black z-[100] bg-opacity-70 flex items-center justify-center lg:hidden">
