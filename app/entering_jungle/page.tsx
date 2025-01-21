@@ -66,11 +66,19 @@ export default function Home() {
         <video
           ref={videoRef}
           muted
-          className="absolute w-full h-full object-cover object-center"
+          className="absolute w-full hidden lg:block h-full object-cover object-center"
           // onTimeUpdate={(e: any) => setCurrentTime(e.target.currentTime)}
         >
           <source src="/vortex_new.mp4" type="video/mp4" />
         </video>
+        <Image
+          width={500}
+          height={100}
+          alt="Not Found"
+          src={"/Image_To_Show.png"}
+          quality={60}
+          className="lg:hidden absolute w-full h-full object-cover object-center"
+        />
         <div className="absolute w-full h-full bg-black z-[100] bg-opacity-70 flex items-center justify-center lg:hidden">
           <h2 className="text-2xl md:text-4xl text-white text-center font-orbitron font-bold">
             Switch to Desktop
