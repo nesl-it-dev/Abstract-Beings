@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { LOADING_TEXT } from "@/utils/constants";
+import Image from "next/image";
 
 const Page = () => {
   const [progress, setProgress] = useState(0);
@@ -37,7 +38,7 @@ const Page = () => {
   return (
     <div className="relative h-screen w-screen overflow-hidden">
       <div className="flex w-screen h-screen">
-        <div className="flex-1 bg-custom-radial">1</div>
+        {/* <div className="flex-1 bg-custom-radial">1</div>
 
         <div className="flex items-center justify-center h-screen">
           <video
@@ -50,7 +51,25 @@ const Page = () => {
           </video>
         </div>
 
-        <div className="flex-1 bg-custom-radial">3</div>
+        <div className="flex-1 bg-custom-radial">3</div> */}
+        <Image
+          src="/collective_new.png"
+          alt="Descriptive Text"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-72 h-72 animate-bounce-slow">
+            <Image
+              src="/robot.png"
+              alt="Centered Image"
+              width={386}
+              height={472}
+              className="object-cover"
+            />
+          </div>
+        </div>
       </div>
 
       {/* Progress Bar */}
@@ -67,7 +86,7 @@ const Page = () => {
       <div className="absolute right-[-40%] bottom-[8%] w-full text-center text-white z-20">
         <p className="text-sm">{progress}%</p>
       </div>
-      <div className="absolute bottom-20 w-full text-center text-white z-20">
+      <div className="absolute bottom-20 w-full text-center z-[200] text-white">
         <h1 className="text-xl font-bold">{LOADING_TEXT}</h1>
       </div>
     </div>

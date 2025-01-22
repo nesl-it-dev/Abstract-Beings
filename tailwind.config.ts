@@ -23,6 +23,15 @@ export default {
         "custom-radial":
           "radial-gradient(circle, rgba(10, 17, 14, 0.95) 0.09%, rgba(13, 28, 27, 0.95) 85.76%, rgba(14, 12, 7, 0.95) 101.74%)",
       },
+      keyframes: {
+        bounceSlow: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(60px)" },
+        },
+      },
+      animation: {
+        "bounce-slow": "bounceSlow 2s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

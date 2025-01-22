@@ -123,7 +123,7 @@ export default function Home() {
         )}
 
         {/* Overlay */}
-        <div className="absolute w-full h-full  flex items-center justify-center px-4">
+        <div className="absolute hidden lg:flex w-full h-full  items-center justify-center px-4">
           {!enterPortal && (
             <div className="flex flex-col gap-10 justify-center items-center">
               {/* <Image
