@@ -1,7 +1,7 @@
 export const PROJECT_NAME = "Abstract Beings";
 export const TOGGLE_SOUND = "Enable Sound";
 export const DISABLE_SOUND = "Disable Sound";
-export const LOADING_TEXT = "Preparing to enter the Abstract Portal ...";
+export const LOADING_TEXT = "Preparing to enter the Abstract Portal...";
 export const PASSWORD = "Imagination";
 
 export const VISION_SECTION = {
