@@ -7,6 +7,8 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { DISABLE_SOUND, TOGGLE_SOUND } from "@/utils/constants";
 import { useAudio } from "@/utils/audio_context";
+import Link from "next/link";
+import next from "next";
 
 const Hero = () => {
   const [scrollAmount, setScrollAmount] = useState(0);
@@ -40,9 +42,14 @@ const Hero = () => {
           {PROJECT_NAME}
         </h1> */}
         <div className="flex space-x-4 sm:space-x-6 lg:space-x-8">
-          <BsTwitter className="w-8 h-8 sm:w-10 sm:h-10 xl:w-12 xl:h-12 cursor-pointer hover:text-peach" />
-          <BsDiscord className="w-8 h-8 sm:w-10 sm:h-10 xl:w-12 xl:h-12 cursor-pointer hover:text-peach" />
-          <FaTelegramPlane className="w-8 h-8 sm:w-10 sm:h-10 xl:w-12 xl:h-12 cursor-pointer hover:text-peach" />
+          <a href={"https://x.com/Abstract_Beings"} target="_blank">
+            <BsTwitter className="w-8 h-8 sm:w-10 sm:h-10 xl:w-12 xl:h-12 cursor-pointer hover:text-peach" />
+          </a>
+          <a href={"https://discord.gg/XRPj2PxwXs"} target="_blank">
+            <BsDiscord className="w-8 h-8 sm:w-10 sm:h-10 xl:w-12 xl:h-12 cursor-pointer hover:text-peach" />
+          </a>
+
+          {/* <FaTelegramPlane className="w-8 h-8 sm:w-10 sm:h-10 xl:w-12 xl:h-12 cursor-pointer hover:text-peach" /> */}
         </div>
       </header>
 
