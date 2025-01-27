@@ -1,10 +1,10 @@
 "use client";
 
+import Button from "@/components/button/button";
+import { PROJECT_NAME } from "@/utils/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Button from "@/components/button/button";
 import { BsDiscord, BsTwitter } from "react-icons/bs";
-import { PROJECT_NAME } from "@/utils/constants";
 
 const AbstractCollective = () => {
   return (
@@ -55,10 +55,16 @@ const AbstractCollective = () => {
           <Button
             text="Twitter"
             iconComponent={<BsTwitter className="text-3xl" />}
+            onClick={() =>
+              window.open("https://x.com/Abstract_Beings", "__blank")
+            }
           />
           <Button
             text="Discord"
             iconComponent={<BsDiscord className="text-3xl" />}
+            onClick={() =>
+              window.open("https://discord.gg/XRPj2PxwXs", "__blank")
+            }
           />
         </div>
       </div>

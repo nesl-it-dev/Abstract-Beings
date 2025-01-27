@@ -74,13 +74,17 @@ const Footer = () => {
         {/* Social Icons */}
         <div className="flex space-x-6 mt-4">
           <a
-            href="#"
+            href="https://x.com/Abstract_Beings"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:scale-110 transition transform duration-300"
           >
             <BsTwitter className="w-10 h-10 text-black" />
           </a>
           <a
-            href="#"
+            href="https://discord.gg/XRPj2PxwXs"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:scale-110 transition transform duration-300"
           >
             <BsDiscord className="w-10 h-10 text-black" />

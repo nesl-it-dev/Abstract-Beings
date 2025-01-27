@@ -69,6 +69,9 @@ const AbstractSection = () => {
             text="Discord"
             iconComponent={<FaDiscord className="text-3xl" />}
             width={180}
+            onClick={() =>
+              window.open("https://discord.gg/XRPj2PxwXs", "__blank")
+            }
           />
         </div>
       </div>
@@ -81,7 +84,7 @@ const AbstractSection = () => {
         transition={{ duration: 0.8, ease: "easeInOut" }}
       >
         <Image
-          src="/ghost_3.png"
+          src="/Rotating_Robot.png"
           alt="Abstract Chain Character"
           width={600}
           height={600}
