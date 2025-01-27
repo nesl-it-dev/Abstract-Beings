@@ -12,7 +12,7 @@ export default function Page() {
   const [isCorrectPassword, setCorrectPassword] = useState(false);
   const [error, setError] = useState(false);
   const router = useRouter();
-  const [currentTime, setCurrentTime] = useState(0);
+  const [currentTime] = useState(0);
   const correctPassword = PASSWORD;
 
   const handleLogin = () => {
@@ -38,29 +38,6 @@ export default function Page() {
     <>
       <div className="relative w-full h-screen flex items-center justify-center">
         {/* Background Video */}
-
-        {isCorrectPassword && (
-          <video
-            autoPlay
-            loop
-            muted
-            className="absolute w-full h-full object-cover"
-            onTimeUpdate={(e: any) => setCurrentTime(e.target.currentTime)}
-          >
-            <source src="/wormhole.mp4" type="video/mp4" />
-          </video>
-        )}
-
-        {!isCorrectPassword && (
-          <video
-            autoPlay
-            loop
-            muted
-            className="absolute w-full h-full object-cover"
-          >
-            <source src="/vortex.mp4" type="video/mp4" />
-          </video>
-        )}
 
         {/* Overlay */}
         <div className="absolute w-full h-full bg-black bg-opacity-50 flex items-center justify-center px-4">

@@ -66,6 +66,8 @@ export default function Home() {
         <video
           ref={videoRef}
           muted
+          preload="auto"
+          poster="/vortex.png"
           className="absolute w-full hidden lg:block h-full object-cover object-center"
           // onTimeUpdate={(e: any) => setCurrentTime(e.target.currentTime)}
         >
@@ -197,6 +199,11 @@ export default function Home() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       className="w-[400px] xl:px-6 xl:py-3 text-xl rounded-lg outline-none text-black bg-green-100 bg-opacity-35 mt-12"
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          handleLogin(); // Trigger handleLogin when Enter key is pressed
+                        }
+                      }}
                     />
                     {error && (
                       <p className="text-red-500 mt-2">Oops! Wrong password.</p>
