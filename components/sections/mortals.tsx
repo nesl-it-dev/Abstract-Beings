@@ -19,7 +19,7 @@ const CallToMortals = () => {
       </div>
 
       {/* Content Box */}
-      <div className="relative md:absolute md:right-[15%] lg:right-[1%] xl:right-[15%] md:top-[5%] lg:max-w-[70%] xl:max-w-screen-md w-full p-6 sm:p-8 md:p-10 !pt-0 max-h-[70%] overflow-hidden flex flex-col gap-6 text-left">
+      <div className="relative md:absolute md:right-[7%] lg:right-[7%] xl:right-[7%] md:top-[5%] lg:max-w-[70%] xl:max-w-screen-md w-full p-6 sm:p-8 md:p-10 !pt-0 max-h-[70%] overflow-hidden flex flex-col gap-6 text-left">
         <h1 className="text-3xl sm:text-4xl font-bold text-black">
           Discover the Abstract Beings – One Stage at a Time
         </h1>

@@ -88,7 +88,7 @@ const AbstractSection = () => {
           alt="Abstract Chain Character"
           width={600}
           height={600}
-          className="w-3/4 md:w-full lg:max-w-[500px]"
+          className="w-3/4 md:w-full lg:max-w-[500px] transform translate-x-[-80px] translate-y-[70px]"
           loading="eager"
         />
       </motion.div>

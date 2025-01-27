@@ -42,12 +42,12 @@ const Mystical = () => {
           known. From this portal emerge the Abstract Beings, enigmatic entities
           forged from fragments of creativity, fear, ambition, and wonder.
         </p>
-        {/* Button Container */}
+        {/* Button Container
         <div className="flex justify-center">
           <div className="max-w-xs w-full">
             <Button text="Read More" iconSrc="/right_arrow.png" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

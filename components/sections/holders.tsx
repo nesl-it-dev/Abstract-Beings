@@ -43,7 +43,7 @@ unlock the full potential of their Abstract Beings.`,
     //     },
 
     {
-      title: "Supporting Holder Brands and Businesses",
+      title: "Holder Brands & Businesses",
       subtitle: "Your vision, our support",
       description: `${PROJECT_NAME} is more than an NFT—it’s a partner in growth. Whether you're an 
 entrepreneur, artist, founder or visionary, we’re here to help you leverage your NFT to
