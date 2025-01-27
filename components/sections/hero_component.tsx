@@ -3,12 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { BsDiscord, BsTwitter } from "react-icons/bs";
-import { FaTelegramPlane } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { DISABLE_SOUND, TOGGLE_SOUND } from "@/utils/constants";
 import { useAudio } from "@/utils/audio_context";
-import Link from "next/link";
-import next from "next";
 
 const Hero = () => {
   const [scrollAmount, setScrollAmount] = useState(0);
