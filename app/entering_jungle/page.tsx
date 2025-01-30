@@ -147,6 +147,23 @@ export default function Home() {
               />
             </div>
           )}
+          <>
+            <motion.div
+              initial={{ y: 0 }}
+              animate={{ y: [0, -10, 0] }}
+              transition={{ repeat: Infinity, duration: 2 }}
+              className="absolute bottom-4 right-4"
+            >
+              <img src="/ghost_1.png" alt="Ghost" className="w-56 h-56" />
+            </motion.div>
+
+            <div
+              className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md  hover:text-peach cursor-pointer"
+              onClick={isPlaying ? stopAudio : playAudio}
+            >
+              {isPlaying ? DISABLE_SOUND : TOGGLE_SOUND}
+            </div>
+          </>
 
           {enterPortal && (
             <motion.div
@@ -155,31 +172,6 @@ export default function Home() {
               transition={{ duration: 1.5, ease: "easeInOut" }}
               className="text-center text-white space-y-4 max-w-[600px]"
             >
-              {/* Top-left Positioned Title */}
-              {/* <h1 className="absolute top-4 left-4 text-4xl font-bold">
-                {PROJECT_NAME}
-              </h1> */}
-
-              {/* Bottom-right Positioned Ghost Image */}
-              {!isCorrectPassword && (
-                <motion.div
-                  initial={{ y: 0 }}
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ repeat: Infinity, duration: 2 }}
-                  className="absolute bottom-4 right-4"
-                >
-                  <img src="/ghost_1.png" alt="Ghost" className="w-56 h-56" />
-                </motion.div>
-              )}
-
-              {/* Enable Sound Button */}
-              <div
-                className="absolute bottom-10 md:bottom-16 right-5 md:right-10 text-white text-lg md:text-2xl lg:text-3xl font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-md  hover:text-peach cursor-pointer"
-                onClick={isPlaying ? stopAudio : playAudio}
-              >
-                {isPlaying ? DISABLE_SOUND : TOGGLE_SOUND}
-              </div>
-
               {/* Password Input Box */}
               {!isCorrectPassword && (
                 <div className="p-6">
