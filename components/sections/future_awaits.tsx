@@ -1,3 +1,4 @@
+import { FUTURE_AWAITS } from "@/utils/constants";
 import Image from "next/image";
 const FutureAwaits = () => {
   return (
@@ -12,24 +13,13 @@ const FutureAwaits = () => {
             </span>
           </h1>
           <p className="text-black text-sm sm:text-lg md:text-xl leading-relaxed">
-            The Abstract Beings are no longer confined to their realm. They walk
-            among us now, drawn to those who dare to imagine the impossible.
-            Together, they forge a new path, one where the mortal and the
-            Abstract unite to heal the shattered portal and restore balance to
-            creation.
+            {FUTURE_AWAITS.content1}
           </p>
           <p className="text-black text-sm sm:text-lg md:text-xl leading-relaxed mt-4">
-            But the journey is far from over. The portal still flickers, and its
-            energy wanes. Whispers of an ancient prophecy speak of a
-            convergence—a moment when the Abstract Portal will reveal its true
-            nature and its ultimate purpose. Until then, the Abstract Beings and
-            their human partners must tread carefully, for the balance is
-            delicate, and the forces of chaos are always watching.
+            {FUTURE_AWAITS.content2}
           </p>
           <p className="text-black text-sm sm:text-lg md:text-xl leading-relaxed mt-4">
-            Will you answer the portal’s call? Will you become a part of the
-            Abstract, shaping its story and discovering its secrets? The portal
-            is open, and the Abstract Beings await.
+            {FUTURE_AWAITS.content3}
           </p>
         </div>
       </div>

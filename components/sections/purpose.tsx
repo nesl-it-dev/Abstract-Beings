@@ -1,6 +1,6 @@
 "use client";
 
-import { PROJECT_NAME } from "@/utils/constants";
+import { PURPOSE_CONTENT } from "@/utils/constants";
 import Image from "next/image";
 
 const Purpose = () => {
@@ -27,20 +27,10 @@ const Purpose = () => {
           The Portal’s <span className="text-black md:text-5xl">Purpose</span>
         </h2>
         <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
-          No one knows who or what created the Abstract Portal, only that it has
-          always existed. It is both a gate and a sentinel, balancing the
-          threads of countless worlds. From its glowing core, energy flows,
-          giving birth to the Abstract Beings. These beings are more than mere
-          creatures; they are manifestations of thought, shadows of ideas, and
-          echoes of emotions that mortals and other entities once imagined.
+          {PURPOSE_CONTENT.content1}
         </p>
         <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mt-4">
-          Each {PROJECT_NAME} is shaped by the raw energy of the portal and the
-          stories whispered into its realm. Some are serene and luminous,
-          embodying hope and clarity. Others are chaotic and fractured,
-          reflections of conflict and despair. Together, they are the guardians
-          and keepers of balance in the Abstract, maintaining the fragile
-          equilibrium between order and entropy.
+          {PURPOSE_CONTENT.content2}
         </p>
       </div>
     </div>

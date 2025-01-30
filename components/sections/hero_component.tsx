@@ -35,9 +35,6 @@ const Hero = () => {
         }`}
         style={{ opacity: headerOpacity }}
       >
-        {/* <h1 className="text-xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold">
-          {PROJECT_NAME}
-        </h1> */}
         <div className="flex space-x-4 sm:space-x-6 lg:space-x-8">
           <a href={"https://x.com/Abstract_Beings"} target="_blank">
             <BsTwitter className="w-8 h-8 sm:w-10 sm:h-10 xl:w-12 xl:h-12 cursor-pointer hover:text-peach" />
@@ -45,8 +42,6 @@ const Hero = () => {
           <a href={"https://discord.gg/XRPj2PxwXs"} target="_blank">
             <BsDiscord className="w-8 h-8 sm:w-10 sm:h-10 xl:w-12 xl:h-12 cursor-pointer hover:text-peach" />
           </a>
-
-          {/* <FaTelegramPlane className="w-8 h-8 sm:w-10 sm:h-10 xl:w-12 xl:h-12 cursor-pointer hover:text-peach" /> */}
         </div>
       </header>
 
@@ -65,16 +60,6 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="relative top-[12%] md:top-[18%] lg:top-[12%] text-center text-white px-4">
-        {/* <Image
-          src="/Title.png"
-          width={500}
-          height={500}
-          alt="Title"
-          className="w-52 sm:w-60 md:w-72 lg:w-80 xl:w-[500px]"
-          loading="eager"
-          priority
-          quality={80}
-        /> */}
         <h1 className="text-5xl mb-3">WELCOME TO</h1>
         <h1 className="text-6xl">ABSTRACT BEINGS</h1>
       </div>

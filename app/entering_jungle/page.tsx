@@ -5,12 +5,7 @@ import { motion } from "framer-motion";
 import Button from "@/components/button/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import {
-  DISABLE_SOUND,
-  PASSWORD,
-  // PROJECT_NAME,
-  TOGGLE_SOUND,
-} from "@/utils/constants";
+import { DISABLE_SOUND, PASSWORD, TOGGLE_SOUND } from "@/utils/constants";
 import { useAudio } from "@/utils/audio_context";
 
 export default function Home() {
@@ -20,7 +15,6 @@ export default function Home() {
   const [error, setError] = useState(false);
   const [videoPlay, setVideoPlay] = useState(false);
   const router = useRouter();
-  // const [currentTime, setCurrentTime] = useState(0);
   const correctPassword = PASSWORD;
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const { isPlaying, playAudio, stopAudio } = useAudio();
@@ -69,7 +63,6 @@ export default function Home() {
           preload="auto"
           poster="/vortex.png"
           className="absolute w-full hidden lg:block h-full object-cover object-center"
-          // onTimeUpdate={(e: any) => setCurrentTime(e.target.currentTime)}
         >
           <source src="/vortex_new.mp4" type="video/mp4" />
         </video>
@@ -90,33 +83,11 @@ export default function Home() {
         {!videoPlay && (
           <>
             <div className="absolute 2xl:top-[11.5%] 2xl:left-[24%]  xl:top-[1.8%]  xl:left-[27%] xl:w-[200px] xl:h-[50px] top-[14%] left-[20%] w-[145px] h-[35px] mr-10">
-              {/* <Image
-                src="/abstract_title.png"
-                // width={600}
-                // height={600}
-                alt="Title"
-                // className="w-60 md:w-96 lg:w-[300px] mx-auto"
-                loading="eager"
-                priority
-                quality={50}
-                fill
-              /> */}
               <h2 className="text-4xl 2xl:text-5xl text-white hidden lg:block">
                 ABSTRACT
               </h2>
             </div>
             <div className="absolute 2xl:top-[11.5%] 2xl:right-[34.2%]  xl:top-[2%] xl:right-[32%] xl:w-[200px] xl:h-[60px] top-[14%] right-[30%] w-[150px] h-[35px]">
-              {/* <Image
-                src="/beign_title.png"
-                // width={300}
-                // height={300}
-                alt="Title"
-                // className="w-60 md:w-96 lg:w-[300px] mx-auto"
-                loading="eager"
-                priority
-                quality={50}
-                fill
-              /> */}
               <h2 className="text-4xl  2xl:text-5xl text-white hidden lg:block">
                 BEINGS
               </h2>
@@ -128,16 +99,6 @@ export default function Home() {
         <div className="absolute hidden lg:flex w-full h-full  items-center justify-center px-4">
           {!enterPortal && (
             <div className="flex flex-col gap-10 justify-center items-center">
-              {/* <Image
-                src="/abstract_title.png"
-                width={600}
-                height={600}
-                alt="Title"
-                className="w-60 md:w-96 lg:w-[300px] mx-auto"
-                loading="eager"
-                priority
-                quality={50}
-              /> */}
               <Button
                 text="Enter the Abstract"
                 onClick={() => setEnterPortal(true)}
@@ -193,7 +154,7 @@ export default function Home() {
                       className="w-[400px] xl:px-6 xl:py-3 text-xl rounded-lg outline-none text-black bg-green-100 bg-opacity-35 mt-12"
                       onKeyDown={(e) => {
                         if (e.key === "Enter") {
-                          handleLogin(); // Trigger handleLogin when Enter key is pressed
+                          handleLogin();
                         }
                       }}
                     />

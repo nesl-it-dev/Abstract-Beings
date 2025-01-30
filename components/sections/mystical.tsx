@@ -1,3 +1,4 @@
+import { MYSTICAL_CONTENT } from "@/utils/constants";
 import Image from "next/image";
 
 const Mystical = () => {
@@ -27,26 +28,11 @@ const Mystical = () => {
           A New Dimension Of Mystical Minimalism
         </h2>
         <p className="text-sm sm:text-base md:text-lg text-white">
-          In the infinite expanse beyond reality, where form and formlessness
-          intertwine, there exists a plane unlike any other—a dimension born
-          from the boundless depths of thought and emotion. This realm, known
-          only in whispers as the Abstract, is not governed by time, matter, or
-          logic. It is a canvas where imagination paints, and dreams take shape.
+          {MYSTICAL_CONTENT.content1}
         </p>
         <p className="text-sm sm:text-base md:text-lg text-white">
-          At the heart of this mysterious expanse lies the Abstract Portal, a
-          radiant, shifting gateway pulsating with energy from countless
-          dimensions. It is said that the portal holds the essence of all
-          creation—a nexus where the unreal becomes real, and the unseen becomes
-          known. From this portal emerge the Abstract Beings, enigmatic entities
-          forged from fragments of creativity, fear, ambition, and wonder.
+          {MYSTICAL_CONTENT.content2}
         </p>
-        {/* Button Container
-        <div className="flex justify-center">
-          <div className="max-w-xs w-full">
-            <Button text="Read More" iconSrc="/right_arrow.png" />
-          </div>
-        </div> */}
       </div>
     </div>
   );
