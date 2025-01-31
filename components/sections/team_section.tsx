@@ -2,46 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
-
-const teamMembers = [
-  {
-    name: "Zaki",
-    title: "The Portal Master",
-    subtitle: "The mind behind the magic",
-    description: `Zaki is the driving force behind Abstract Beings, weaving together its captivating lore & intricate mechanics. Abstract Beings is a result of his
-passion, commitment and experience in Crypto, NFTs & Web3 as a whole. A strong leader with a passion for storytelling & a vision to create a bridge between imagination and technology, Zaki has crafted a universe where creativity knows no bounds. As the founder, he ensures that every element of the Abstract Portal & its Beings stays true to its mystical essence, & the project stays on track for achieving future goals`,
-    image: "/team_2.png",
-    bg: "/card_bg_1.png",
-  },
-  {
-    name: "Leah",
-    title: "The Portal Artisan",
-    subtitle: "The hands that shape the Abstract.",
-    description: `Leah is the creative genius behind the design of Abstract Beings. An excellent 3D artist with an eye for detail and a knack for bringing concepts to life, she has created the unique and mystical aesthetic that defines the Abstract realm. From glowing crowns to ethereal traits, every
-Being carries her signature touch of artistry and storytelling.`,
-    image: "/team_1.png",
-    bg: "/card_bg_1.png",
-  },
-
-  {
-    name: "Masnoon",
-    title: "The Dream Weaver",
-    subtitle: "The weaver of dreams into reality.",
-    description:
-      "Masnoon is a seasoned professional with a proven track record of building successful brands and businesses in Web2. His deep passion for Web3 innovation has led him to join Abstract Beings as a partner, bringing his expertise in growth and strategy to the project in order to help holders build their own brands and businesses. With a knack for turning ideas into thriving ecosystems, He plays a pivotal role in shaping the Abstract Portal into a gateway for creators and dreamers. His vision and experience ensure that Abstract Beings evolves into a cornerstone of the Web3 space",
-    image: "/team_3.png",
-    bg: "/card_bg_1.png",
-  },
-  {
-    name: "Malik",
-    title: "The Code Keeper",
-    subtitle: "The builder of bridges between worlds.",
-    description:
-      "Malik is the Lead Dev of Abstract Beings, ensuring the project runs seamlessly on the Abstract Chain with the help of his team of developers. With years of experience in blockchain development, Malik has worked on several successful projects, including big names like Azuki, bringing unparalleled expertise to the team. He is responsible for crafting smart contracts, integrating innovative utilities, and maintaining a robust ecosystem for the Abstract Portal",
-    image: "/team_4.png",
-    bg: "/card_bg_1.png",
-  },
-];
+import { teamMembers } from "@/utils/constants";
 
 export default function TeamSection() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);

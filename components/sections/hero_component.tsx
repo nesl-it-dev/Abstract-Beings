@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { BsDiscord, BsTwitter } from "react-icons/bs";
 import { useEffect, useState } from "react";
-import { DISABLE_SOUND, TOGGLE_SOUND } from "@/utils/constants";
+import { DISABLE_SOUND, PROJECT_NAME, TOGGLE_SOUND } from "@/utils/constants";
 import { useAudio } from "@/utils/audio_context";
 
 const Hero = () => {
@@ -61,7 +61,7 @@ const Hero = () => {
       {/* Main Content */}
       <div className="relative top-[12%] md:top-[18%] lg:top-[12%] text-center text-white px-4">
         <h1 className="text-5xl mb-3">WELCOME TO</h1>
-        <h1 className="text-6xl">ABSTRACT BEINGS</h1>
+        <h1 className="text-6xl">{PROJECT_NAME}</h1>
       </div>
 
       {/* Animated Character Image */}

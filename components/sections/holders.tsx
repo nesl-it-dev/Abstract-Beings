@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { PROJECT_NAME } from "@/utils/constants";
+import { utilities } from "@/utils/constants";
 
 const Holders = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,43 +12,6 @@ const Holders = () => {
     subtitle: "",
     description: "",
   });
-
-  const utilities = [
-    {
-      title: "NFT Licensing",
-      subtitle: "Empower your creativity",
-      description: `Abstract Beings holders will gain full commercial rights to their NFTs, enabling them to license their characters for branding, merchandise, storytelling, or creative collaborations. Build your own empire with the ‘Beings’ as your cornerstone`,
-    },
-    {
-      title: "IP and Brand Building",
-      subtitle: "Every Being has a story to tell",
-      description: `Each ${PROJECT_NAME} is a unique identity waiting to be developed into a global intellectual property. We provide the tools and resources for holders to bring their Being’s story to life—whether it’s through art, media, or partnerships`,
-    },
-    {
-      title: "Beings Hub",
-      subtitle: "",
-      description: `The Beings Hub is a central platform for holders to 
-explore, create, and connect. It offers a personalized dashboard to track 
-NFTs, tools for IP development and exclusive lore integration. Holders 
-can also network with the community, participate in events, and access 
-brand-building resources—all in one seamless, intuitive space designed to
-unlock the full potential of their Abstract Beings.`,
-    },
-    {
-      title: "Holder Brands & Businesses",
-      subtitle: "Your vision, our support",
-      description: `${PROJECT_NAME} is more than an NFT—it’s a partner in growth. Whether you're an 
-entrepreneur, artist, founder or visionary, we’re here to help you leverage your NFT to
-create impactful personal or business brands`,
-    },
-
-    {
-      title: "Community Rewards",
-      subtitle: "Grow together, thrive together",
-      description: `Holders of Abstract Beings will enjoy exclusive perks and rewards, including allocations, whitelists, etc. and access to ecosystem events, and community-driven opportunities. Together, we’ll build a thriving network that redefines what it means to
-be part of an NFT project`,
-    },
-  ];
 
   const openModal = (item: any) => {
     setModalContent(item);

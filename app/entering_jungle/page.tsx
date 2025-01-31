@@ -145,6 +145,7 @@ export default function Home() {
                     loading="eager"
                     priority
                     quality={50}
+                    placeholder="empty"
                   />
                   <div className="flex flex-col justify-center items-center">
                     <input
